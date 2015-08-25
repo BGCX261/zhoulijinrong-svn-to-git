@@ -1,0 +1,13 @@
+﻿.rank_list { line-height: 14px; margin: auto; padding-top: 5px; }
+.rank_list li { height: 12px; margin-bottom: 7px; padding-right: 10px; white-space: normal; overflow: hidden; position: relative; text-align: left; }
+.rank_list li.top3 em { background: #FFE4B7; border: 1px solid #FFBB8B; color: #FF6800; }
+.rank_list em { position: absolute; width: 12px; height: 12px; border: 1px solid #B1E0F4; color: #6298CC; font-style: normal; font-size: 10px; font-family: Arial; background: #E6F0FD; text-align: center; line-height: 12px; overflow: hidden; }
+.rank_list span.span1 { position: relative; left: 15px; float: none; }
+.rank_list span.span2 { position: absolute; right: 10px; }
+.rank_list span.word_cut { width: 178px; overflow: hidden; white-space: nowrap; }
+.btn { border: #cccccc 0px inset; height: 22px; width: 65px; background: url(../Img/i_button_bg.gif) repeat left top; font-weight: bold; text-align: center; color: #FFFFFF; cursor: pointer; margin-left: 0px; margin-right: 0px; margin-bottom: 2px; }
+.btn_long { border: #cccccc 0px inset; height: 22px; width: 81px; background: url(../Img/i_button_bg_l.gif) repeat left top; font-weight: bold; text-align: center; color: #FFFFFF; cursor: pointer; margin: 0px 0px 2px 0px; }
+.btn_short_person { border: #cccccc 0px inset; margin: 0px 0px 2px 0px; height: 16px; width: 16px; background: url(../Img/i_authorize.gif) repeat left top; text-align: center; color: #FFFFFF; cursor: pointer; }
+.divSubmit { text-align: center; margin-top: 10px; }
+.divTitle { color: #0099cc; font-weight: bold; text-indent: 10px; padding: 5px; }
+.aSelect { text-decoration: underline; margin-left: 10px; }

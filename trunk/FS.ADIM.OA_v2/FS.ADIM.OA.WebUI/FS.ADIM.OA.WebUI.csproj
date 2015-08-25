@@ -1,0 +1,1403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A35B179-0A88-437F-9B1C-602652A72FC3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FS.ADIM.OA.WebUI</RootNamespace>
+    <AssemblyName>FounderSoftware.ADIM.OA.WebUI</AssemblyName>
+    <RootNamespace>FS.ADIM.OA.WebUI</RootNamespace>
+    <AssemblyName>FS.ADIM.OA.WebUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ascentn.Workflow.Share, Version=2.0.0.1, Culture=neutral, PublicKeyToken=6438ef87a2e74007, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\AgilePoint\Ascentn.Workflow.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="Ascentn.Workflow.WebControls, Version=1.0.0.1, Culture=neutral, PublicKeyToken=432f0ed5adf5e940, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\AgilePoint\Ascentn.Workflow.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Ascentn.Workflow.WebService, Version=2.0.2.1, Culture=neutral, PublicKeyToken=6404f39064ab2a4e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\AgilePoint\Ascentn.Workflow.WebService.dll</HintPath>
+    </Reference>
+    <Reference Include="Ascentn.Workflow.WFBase, Version=2.0.2.1, Culture=neutral, PublicKeyToken=021ca826ae8118aa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\AgilePoint\Ascentn.Workflow.WFBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Ascentn.Workflow.WFXml, Version=2.0.2.1, Culture=neutral, PublicKeyToken=c047c69d3159d380, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\AgilePoint\Ascentn.Workflow.WFXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Brettle.Web.NeatUpload, Version=1.3.3452.31604, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\Other\Brettle.Web.NeatUpload.dll</HintPath>
+    </Reference>
+    <Reference Include="FounderSoftware.ADIM.OA.OA2DC, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\FS\OA2DC\FounderSoftware.ADIM.OA.OA2DC.dll</HintPath>
+    </Reference>
+    <Reference Include="FounderSoftware.ADIM.OA.OA2DP, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.dll</HintPath>
+    </Reference>
+    <Reference Include="FounderSoftware.ADIM.OU.BLL, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\FS\FounderSoftware.ADIM.OU.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="FounderSoftware.ADIM.SSO.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\FS\FounderSoftware.ADIM.SSO.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="FounderSoftware.ADIM.SSO.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\FS\FounderSoftware.ADIM.SSO.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="FounderSoftware.Config, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\FS\FounderSoftware.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="FounderSoftware.Framework.Business, Version=6.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\FS\FounderSoftware.Framework.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="FounderSoftware.Framework.DataAccess, Version=6.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\FS\FounderSoftware.Framework.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="FounderSoftware.Framework.UI.WebCtrls, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\FS\FounderSoftware.Framework.UI.WebCtrls.dll</HintPath>
+    </Reference>
+    <Reference Include="FounderSoftware.Framework.UI.WebPageFrame, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\FS\FounderSoftware.Framework.UI.WebPageFrame.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FS.OA.DLL\Other\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Container.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgilePoint\ProcessImage.aspx.cs">
+      <DependentUpon>ProcessImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgilePoint\ProcessImage.aspx.designer.cs">
+      <DependentUpon>ProcessImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgilePoint\ProcessViewer.aspx.cs">
+      <DependentUpon>ProcessViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgilePoint\ProcessViewer.aspx.designer.cs">
+      <DependentUpon>ProcessViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgilePoint\ProcessViewerService.asmx.cs">
+      <DependentUpon>ProcessViewerService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BatchDevolve.aspx.cs">
+      <DependentUpon>BatchDevolve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchDevolve.aspx.designer.cs">
+      <DependentUpon>BatchDevolve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BatchPrint.aspx.cs">
+      <DependentUpon>BatchPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BatchPrint.aspx.designer.cs">
+      <DependentUpon>BatchPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Container.aspx.cs">
+      <DependentUpon>Container.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Container.aspx.designer.cs">
+      <DependentUpon>Container.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DevolveHandler.ashx.cs">
+      <DependentUpon>DevolveHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Left.aspx.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Left.aspx.designer.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageOU\PG_Company.aspx.cs">
+      <DependentUpon>PG_Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\PG_Company.aspx.designer.cs">
+      <DependentUpon>PG_Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageOU\PG_CompanyMore.aspx.cs">
+      <DependentUpon>PG_CompanyMore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\PG_CompanyMore.aspx.designer.cs">
+      <DependentUpon>PG_CompanyMore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageOU\UC_Company.ascx.cs">
+      <DependentUpon>UC_Company.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\UC_Company.ascx.designer.cs">
+      <DependentUpon>UC_Company.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageOU\OAPGBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\PG_OASelect.aspx.cs">
+      <DependentUpon>PG_OASelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\PG_OASelect.aspx.designer.cs">
+      <DependentUpon>PG_OASelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageOU\UC_CompanyMore.ascx.cs">
+      <DependentUpon>UC_CompanyMore.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\UC_CompanyMore.ascx.designer.cs">
+      <DependentUpon>UC_CompanyMore.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageOU\UC_OASelect.ascx.cs">
+      <DependentUpon>UC_OASelect.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\UC_OASelect.ascx.designer.cs">
+      <DependentUpon>UC_OASelect.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageOU\OAUCBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\PG_Role.aspx.cs">
+      <DependentUpon>PG_Role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\PG_Role.aspx.designer.cs">
+      <DependentUpon>PG_Role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageOU\UC_Role.ascx.cs">
+      <DependentUpon>UC_Role.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\UC_Role.ascx.designer.cs">
+      <DependentUpon>UC_Role.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageOU\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageOU\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageWF\FileDownLoad.aspx.cs">
+      <DependentUpon>FileDownLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageWF\FileDownLoad.aspx.designer.cs">
+      <DependentUpon>FileDownLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageWF\MossObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageWF\PG_FileControl.aspx.cs">
+      <DependentUpon>PG_FileControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageWF\PG_FileControl.aspx.designer.cs">
+      <DependentUpon>PG_FileControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageWF\UC_FileControl.ascx.cs">
+      <DependentUpon>UC_FileControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageWF\UC_FileControl.ascx.designer.cs">
+      <DependentUpon>UC_FileControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageWF\UC_Print.ascx.cs">
+      <DependentUpon>UC_Print.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageWF\UC_Print.ascx.designer.cs">
+      <DependentUpon>UC_Print.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Print\CEventLog.cs" />
+    <Compile Include="Print\FactoryWord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Print\IWord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Print\Word07.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service\GetDealingItemCount.asmx.cs">
+      <DependentUpon>GetDealingItemCount.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\WSGetCode.asmx.cs">
+      <DependentUpon>WSGetCode.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SetFromsID.aspx.cs">
+      <DependentUpon>SetFromsID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetFromsID.aspx.designer.cs">
+      <DependentUpon>SetFromsID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Top.aspx.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Top.aspx.designer.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIBase\AutoBackup.cs" />
+    <Compile Include="UIBase\AutoRead.cs" />
+    <Compile Include="UIBase\FormBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIBase\FormSave.cs" />
+    <Compile Include="UIBase\FormsUIBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIBase\ListUIBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIBase\TemplateAdmin.cs" />
+    <Compile Include="Web References\MOSSOA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\Circulate\ChuanYueDan.aspx.cs">
+      <DependentUpon>ChuanYueDan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Circulate\ChuanYueDan.aspx.designer.cs">
+      <DependentUpon>ChuanYueDan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\Circulate\PG_WaitReading.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Circulate\UC_CirculateList.ascx.cs">
+      <DependentUpon>UC_CirculateList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Circulate\UC_CirculateList.ascx.designer.cs">
+      <DependentUpon>UC_CirculateList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\Circulate\UC_WaitReading.ascx.cs">
+      <DependentUpon>UC_WaitReading.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Circulate\UC_WaitReading.ascx.designer.cs">
+      <DependentUpon>UC_WaitReading.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\CompleteFiles\PG_CompletedHandle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\CompleteFiles\UC_CompletedHandle.ascx.cs">
+      <DependentUpon>UC_CompletedHandle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\CompleteFiles\UC_CompletedHandle.ascx.designer.cs">
+      <DependentUpon>UC_CompletedHandle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\Finance\PG_FinanceDeptFee.cs" />
+    <Compile Include="WorkflowMenu\Finance\UC_FinanceDeptFee.ascx.cs">
+      <DependentUpon>UC_FinanceDeptFee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Finance\UC_FinanceDeptFee.ascx.designer.cs">
+      <DependentUpon>UC_FinanceDeptFee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\FormInfoAdd\PG_DataSave.aspx.cs">
+      <DependentUpon>PG_DataSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\FormInfoAdd\PG_DataSave.aspx.designer.cs">
+      <DependentUpon>PG_DataSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\FormInfoAdd\PG_FormInfoList.cs" />
+    <Compile Include="WorkflowMenu\FormInfoAdd\UC_FormInfoList.ascx.cs">
+      <DependentUpon>UC_FormInfoList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\FormInfoAdd\UC_FormInfoList.ascx.designer.cs">
+      <DependentUpon>UC_FormInfoList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\PersonalManage\PG_Agent.cs" />
+    <Compile Include="WorkflowMenu\PersonalManage\UC_Agent.ascx.cs">
+      <DependentUpon>UC_Agent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\PersonalManage\UC_Agent.ascx.designer.cs">
+      <DependentUpon>UC_Agent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\Process\PG_ProcessDevolve.cs" />
+    <Compile Include="WorkflowMenu\Process\PG_ProcessRelation.aspx.cs">
+      <DependentUpon>PG_ProcessRelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Process\PG_ProcessRelation.aspx.designer.cs">
+      <DependentUpon>PG_ProcessRelation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\Process\PG_ProcessSearch.cs" />
+    <Compile Include="WorkflowMenu\Process\PG_ProcessStep.aspx.cs">
+      <DependentUpon>PG_ProcessStep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Process\PG_ProcessStep.aspx.designer.cs">
+      <DependentUpon>PG_ProcessStep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\Process\UC_ProcessDevolve.ascx.cs">
+      <DependentUpon>UC_ProcessDevolve.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Process\UC_ProcessDevolve.ascx.designer.cs">
+      <DependentUpon>UC_ProcessDevolve.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\Process\UC_ProcessSearch.ascx.cs">
+      <DependentUpon>UC_ProcessSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Process\UC_ProcessSearch.ascx.designer.cs">
+      <DependentUpon>UC_ProcessSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\ProgramFileMaintain\PG_ProgramFileInfo.cs" />
+    <Compile Include="WorkflowMenu\ProgramFileMaintain\PG_ProgramType.cs" />
+    <Compile Include="WorkflowMenu\ProgramFileMaintain\PG_ProgramTypeSub.cs" />
+    <Compile Include="WorkflowMenu\ProgramFileMaintain\UC_ProgramFileInfo.ascx.cs">
+      <DependentUpon>UC_ProgramFileInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\ProgramFileMaintain\UC_ProgramFileInfo.ascx.designer.cs">
+      <DependentUpon>UC_ProgramFileInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\ProgramFileMaintain\UC_ProgramType.ascx.cs">
+      <DependentUpon>UC_ProgramType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\ProgramFileMaintain\UC_ProgramType.ascx.designer.cs">
+      <DependentUpon>UC_ProgramType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\ProgramFileMaintain\UC_ProgramTypeSub.ascx.cs">
+      <DependentUpon>UC_ProgramTypeSub.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\ProgramFileMaintain\UC_ProgramTypeSub.ascx.designer.cs">
+      <DependentUpon>UC_ProgramTypeSub.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\Report\PG_HSReport.cs" />
+    <Compile Include="WorkflowMenu\Report\PG_Report1.cs" />
+    <Compile Include="WorkflowMenu\Report\UC_HSReport.ascx.cs">
+      <DependentUpon>UC_HSReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Report\UC_HSReport.ascx.designer.cs">
+      <DependentUpon>UC_HSReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\Report\UC_Report1.ascx.cs">
+      <DependentUpon>UC_Report1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\Report\UC_Report1.ascx.designer.cs">
+      <DependentUpon>UC_Report1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\ToDoTask\PG_CommonWaitHandle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\ToDoTask\PG_DraftList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\ToDoTask\PG_WaitHandle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\ToDoTask\UC_CommonWaitHandle.ascx.cs">
+      <DependentUpon>UC_CommonWaitHandle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\ToDoTask\UC_CommonWaitHandle.ascx.designer.cs">
+      <DependentUpon>UC_CommonWaitHandle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\ToDoTask\UC_DraftList.ascx.cs">
+      <DependentUpon>UC_DraftList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\ToDoTask\UC_DraftList.ascx.designer.cs">
+      <DependentUpon>UC_DraftList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowMenu\ToDoTask\UC_WaitHandle.ascx.cs">
+      <DependentUpon>UC_WaitHandle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkflowMenu\ToDoTask\UC_WaitHandle.ascx.designer.cs">
+      <DependentUpon>UC_WaitHandle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageWF\OAUCBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageWF\PG_SendCard.aspx.cs">
+      <DependentUpon>PG_SendCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageWF\PG_SendCard.aspx.designer.cs">
+      <DependentUpon>PG_SendCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageWF\UC_SendCard.ascx.cs">
+      <DependentUpon>UC_SendCard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageWF\UC_SendCard.ascx.designer.cs">
+      <DependentUpon>UC_SendCard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageWF\UC_Comment.ascx.cs">
+      <DependentUpon>UC_Comment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageWF\UC_Comment.ascx.designer.cs">
+      <DependentUpon>UC_Comment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageWF\UC_CommentList.ascx.cs">
+      <DependentUpon>UC_CommentList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageWF\UC_CommentList.ascx.designer.cs">
+      <DependentUpon>UC_CommentList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageWF\PG_Comment.aspx.cs">
+      <DependentUpon>PG_Comment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageWF\PG_Comment.aspx.designer.cs">
+      <DependentUpon>PG_Comment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Circulate\PG_Circulate.cs" />
+    <Compile Include="WorkFlow\Circulate\UC_GoOnCirculate.ascx.cs">
+      <DependentUpon>UC_GoOnCirculate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Circulate\UC_GoOnCirculate.ascx.designer.cs">
+      <DependentUpon>UC_GoOnCirculate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Circulate\UC_Circulate.ascx.cs">
+      <DependentUpon>UC_Circulate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Circulate\UC_Circulate.ascx.designer.cs">
+      <DependentUpon>UC_Circulate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\MoneyCal.cs" />
+    <Compile Include="WorkFlow\Finance\PG_FinanceZDBX.cs" />
+    <Compile Include="WorkFlow\Finance\PG_Finance.cs" />
+    <Compile Include="WorkFlow\Finance\PG_FinanceCCBX.cs" />
+    <Compile Include="WorkFlow\Finance\Print.cs" />
+    <Compile Include="WorkFlow\Finance\UC_FinanceCCBX.ascx.cs">
+      <DependentUpon>UC_FinanceCCBX.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_FinanceCCBX.ascx.designer.cs">
+      <DependentUpon>UC_FinanceCCBX.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_FinanceCCBX_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_FinanceHWBX.ascx.cs">
+      <DependentUpon>UC_FinanceHWBX.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_FinanceHWBX.ascx.designer.cs">
+      <DependentUpon>UC_FinanceHWBX.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_FinanceZDBX.ascx.cs">
+      <DependentUpon>UC_FinanceZDBX.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_FinanceZDBX.ascx.designer.cs">
+      <DependentUpon>UC_FinanceZDBX.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_Finance.ascx.cs">
+      <DependentUpon>UC_Finance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_Finance.ascx.designer.cs">
+      <DependentUpon>UC_Finance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_Finance_Devolve .cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_Finance_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_CCBXDetailOne.ascx.cs">
+      <DependentUpon>UC_CCBXDetailOne.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_CCBXDetailOne.ascx.designer.cs">
+      <DependentUpon>UC_CCBXDetailOne.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_CCBXDetail.ascx.cs">
+      <DependentUpon>UC_CCBXDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_CCBXDetail.ascx.designer.cs">
+      <DependentUpon>UC_CCBXDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\PG_FinanceHWBX.cs" />
+    <Compile Include="WorkFlow\Finance\UC_FinanceJK.ascx.cs">
+      <DependentUpon>UC_FinanceJK.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\UC_FinanceJK.ascx.designer.cs">
+      <DependentUpon>UC_FinanceJK.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Finance\PG_FinanceJK.cs" />
+    <Compile Include="WorkFlow\LetterSend\PG_LetterSend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\LetterSend\Print.cs" />
+    <Compile Include="WorkFlow\LetterSend\UC_LetterSend.ascx.cs">
+      <DependentUpon>UC_LetterSend.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\LetterSend\UC_LetterSend.ascx.designer.cs">
+      <DependentUpon>UC_LetterSend.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\LetterSend\UC_LetterSend_Devolve.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\LetterSend\UC_LetterSend_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\PFInfoDetail.aspx.cs">
+      <DependentUpon>PFInfoDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\PFInfoDetail.aspx.designer.cs">
+      <DependentUpon>PFInfoDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\PG1_ProgramFileList.cs" />
+    <Compile Include="WorkFlow\ProgramFile\PG2_ProgramFile.cs" />
+    <Compile Include="WorkFlow\ProgramFile\PGAddInfo.cs" />
+    <Compile Include="WorkFlow\ProgramFile\PG_CommentInfo.aspx.cs">
+      <DependentUpon>PG_CommentInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\PG_CommentInfo.aspx.designer.cs">
+      <DependentUpon>PG_CommentInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\PG_SignCommentInfo.aspx.cs">
+      <DependentUpon>PG_SignCommentInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\PG_SignCommentInfo.aspx.designer.cs">
+      <DependentUpon>PG_SignCommentInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\Print.cs" />
+    <Compile Include="WorkFlow\ProgramFile\UC1_ProgramFileList.ascx.cs">
+      <DependentUpon>UC1_ProgramFileList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC1_ProgramFileList.ascx.designer.cs">
+      <DependentUpon>UC1_ProgramFileList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC2_ProgramFile.ascx.cs">
+      <DependentUpon>UC2_ProgramFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC2_ProgramFile.ascx.designer.cs">
+      <DependentUpon>UC2_ProgramFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC2_ProgramFile_Devovle.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC2_ProgramFile_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UCAddInfo.ascx.cs">
+      <DependentUpon>UCAddInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UCAddInfo.ascx.designer.cs">
+      <DependentUpon>UCAddInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC_CommentInfo.ascx.cs">
+      <DependentUpon>UC_CommentInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC_CommentInfo.ascx.designer.cs">
+      <DependentUpon>UC_CommentInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC_HuiQian.ascx.cs">
+      <DependentUpon>UC_HuiQian.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC_HuiQian.ascx.designer.cs">
+      <DependentUpon>UC_HuiQian.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC_HuiQianOne.ascx.cs">
+      <DependentUpon>UC_HuiQianOne.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC_HuiQianOne.ascx.designer.cs">
+      <DependentUpon>UC_HuiQianOne.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC_LDHuiQian.ascx.cs">
+      <DependentUpon>UC_LDHuiQian.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC_LDHuiQian.ascx.designer.cs">
+      <DependentUpon>UC_LDHuiQian.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC_LDHuiQianOne.ascx.cs">
+      <DependentUpon>UC_LDHuiQianOne.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\ProgramFile\UC_LDHuiQianOne.ascx.designer.cs">
+      <DependentUpon>UC_LDHuiQianOne.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\ComRecv_Print.cs" />
+    <Compile Include="WorkFlow\Receive\LR_Print.cs" />
+    <Compile Include="WorkFlow\Receive\PG_CompanyReceive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\PG_LetterReceived.cs" />
+    <Compile Include="WorkFlow\Receive\PG_Receive.cs" />
+    <Compile Include="WorkFlow\Receive\Recv_Print.cs" />
+    <Compile Include="WorkFlow\Receive\ReDetail\PG_HSReDetail.cs" />
+    <Compile Include="WorkFlow\Receive\ReDetail\PG_ReDetail.cs" />
+    <Compile Include="WorkFlow\Receive\ReDetail\UC_HSReDetail.ascx.cs">
+      <DependentUpon>UC_HSReDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\ReDetail\UC_HSReDetail.ascx.designer.cs">
+      <DependentUpon>UC_HSReDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\ReDetail\UC_ReDetail.ascx.cs">
+      <DependentUpon>UC_ReDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\ReDetail\UC_ReDetail.ascx.designer.cs">
+      <DependentUpon>UC_ReDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\ReDetail\UC_Step.ascx.cs">
+      <DependentUpon>UC_Step.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\ReDetail\UC_Step.ascx.designer.cs">
+      <DependentUpon>UC_Step.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\Register\PG_HSRegister.cs" />
+    <Compile Include="WorkFlow\Receive\Register\PG_Register.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\Register\UC_HSRegister.ascx.cs">
+      <DependentUpon>UC_HSRegister.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\Register\UC_HSRegister.ascx.designer.cs">
+      <DependentUpon>UC_HSRegister.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\Register\UC_Register.ascx.cs">
+      <DependentUpon>UC_Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\Register\UC_Register.ascx.designer.cs">
+      <DependentUpon>UC_Register.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\RePrint\PG_RePrint.cs" />
+    <Compile Include="WorkFlow\Receive\RePrint\UC_RePrint.ascx.cs">
+      <DependentUpon>UC_RePrint.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\RePrint\UC_RePrint.ascx.designer.cs">
+      <DependentUpon>UC_RePrint.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_CompanyReceive.ascx.cs">
+      <DependentUpon>UC_CompanyReceive.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_CompanyReceive.ascx.designer.cs">
+      <DependentUpon>UC_CompanyReceive.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_CompanyReceive_Devolve.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_CompanyReceive_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_LetterReceived.ascx.cs">
+      <DependentUpon>UC_LetterReceived.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_LetterReceived.ascx.designer.cs">
+      <DependentUpon>UC_LetterReceived.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_LetterReceived_Devolve.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_LetterReceived_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_Receive.ascx.cs">
+      <DependentUpon>UC_Receive.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_Receive.ascx.designer.cs">
+      <DependentUpon>UC_Receive.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_Receive_Devolve.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Receive\UC_Receive_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\RequestReport\PG_RequestReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\RequestReport\Print.cs" />
+    <Compile Include="WorkFlow\RequestReport\UC_RequestReport.ascx.cs">
+      <DependentUpon>UC_RequestReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\RequestReport\UC_RequestReport.ascx.designer.cs">
+      <DependentUpon>UC_RequestReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\RequestReport\UC_RequestReport_Devolve .cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\RequestReport\UC_RequestReport_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Send\ComSnd_Print.cs" />
+    <Compile Include="WorkFlow\Send\PG_Send.cs" />
+    <Compile Include="WorkFlow\Send\UC_CompanySend.ascx.cs">
+      <DependentUpon>UC_CompanySend.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Send\UC_CompanySend.ascx.designer.cs">
+      <DependentUpon>UC_CompanySend.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Send\UC_CompanySend_Devolve.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Send\UC_CompanySend_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Send\UC_Send.ascx.cs">
+      <DependentUpon>UC_Send.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Send\UC_Send.ascx.designer.cs">
+      <DependentUpon>UC_Send.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\Send\UC_Send_Devolve.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Send\UC_Send_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\PGAddInfo.cs" />
+    <Compile Include="WorkFlow\WorkRelation\PG_SignCommentInfo.aspx.cs">
+      <DependentUpon>PG_SignCommentInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\PG_SignCommentInfo.aspx.designer.cs">
+      <DependentUpon>PG_SignCommentInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\PG_WorkRelation.cs" />
+    <Compile Include="WorkFlow\WorkRelation\Print.cs" />
+    <Compile Include="WorkFlow\WorkRelation\UCAddInfo.ascx.cs">
+      <DependentUpon>UCAddInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UCAddInfo.ascx.designer.cs">
+      <DependentUpon>UCAddInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UC_CommentInfo.ascx.cs">
+      <DependentUpon>UC_CommentInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UC_CommentInfo.ascx.designer.cs">
+      <DependentUpon>UC_CommentInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UC_HuiQian.ascx.cs">
+      <DependentUpon>UC_HuiQian.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UC_HuiQian.ascx.designer.cs">
+      <DependentUpon>UC_HuiQian.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UC_HuiQianOne.ascx.cs">
+      <DependentUpon>UC_HuiQianOne.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UC_HuiQianOne.ascx.designer.cs">
+      <DependentUpon>UC_HuiQianOne.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UC_WorkRelation.ascx.cs">
+      <DependentUpon>UC_WorkRelation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UC_WorkRelation.ascx.designer.cs">
+      <DependentUpon>UC_WorkRelation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UC_WorkRelation_Devolve.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\WorkRelation\UC_WorkRelation_Print.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgilePoint\AgilePoint.css" />
+    <Content Include="AgilePoint\ProcessImage.aspx" />
+    <Content Include="AgilePoint\ProcessViewer.aspx" />
+    <Content Include="AgilePoint\ProcessViewerService.asmx" />
+    <Content Include="AgilePoint\resource\en-us\activated.gif" />
+    <Content Include="AgilePoint\resource\en-us\Active.gif" />
+    <Content Include="AgilePoint\resource\en-us\backgound.jpg" />
+    <Content Include="AgilePoint\resource\en-us\background.jpg" />
+    <Content Include="AgilePoint\resource\en-us\banner_left.jpg" />
+    <Content Include="AgilePoint\resource\en-us\banner_mid.jpg" />
+    <Content Include="AgilePoint\resource\en-us\banner_right.jpg" />
+    <Content Include="AgilePoint\resource\en-us\blank.gif" />
+    <Content Include="AgilePoint\resource\en-us\cancelled.gif" />
+    <Content Include="AgilePoint\resource\en-us\claim.gif" />
+    <Content Include="AgilePoint\resource\en-us\HighlightActivity.gif" />
+    <Content Include="AgilePoint\resource\en-us\login.jpg" />
+    <Content Include="AgilePoint\resource\en-us\MultiParticipant.gif" />
+    <Content Include="AgilePoint\resource\en-us\Passed.gif" />
+    <Content Include="AgilePoint\resource\en-us\Pending.gif" />
+    <Content Include="AgilePoint\resource\en-us\PV_Center.gif" />
+    <Content Include="AgilePoint\resource\en-us\PV_Left.gif" />
+    <Content Include="AgilePoint\resource\en-us\PV_Right.gif" />
+    <Content Include="AgilePoint\resource\en-us\SingleParticipant.gif" />
+    <Content Include="AgilePoint\resource\en-us\Task.gif" />
+    <Content Include="AgilePoint\resource\en-us\TaskSub.gif" />
+    <Content Include="AgilePoint\resource\en-us\title_bg.jpg" />
+    <Content Include="AgilePoint\resource\en-us\undo.gif" />
+    <Content Include="AgilePoint\webservice.htc" />
+    <Content Include="Config\Template.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\WFDBConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Img\bg_1.gif" />
+    <Content Include="Img\bt_cancel.gif" />
+    <Content Include="Img\bt_login.gif" />
+    <Content Include="Img\cncc.gif" />
+    <Content Include="Img\fimg.gif" />
+    <Content Include="Img\fimg1.gif" />
+    <Content Include="Img\left4.gif" />
+    <Content Include="Img\left_bg.gif" />
+    <Content Include="Img\left_bg1.gif" />
+    <Content Include="Img\left_folder.gif" />
+    <Content Include="Img\left_top.gif" />
+    <Content Include="Img\login.jpg" />
+    <Content Include="Img\logoff.gif" />
+    <Content Include="Img\logon.gif" />
+    <Content Include="Img\main_left.gif" />
+    <Content Include="Img\menu_bt.gif" />
+    <Content Include="Img\menu_list.gif" />
+    <Content Include="Img\sys_bi.gif" />
+    <Content Include="Img\sys_dc.gif" />
+    <Content Include="Img\sys_dp.gif" />
+    <Content Include="Img\sys_help.gif" />
+    <Content Include="Img\sys_oa.gif" />
+    <Content Include="Img\sys_org.gif" />
+    <Content Include="Img\sys_search.gif" />
+    <Content Include="Img\sys_sm.gif" />
+    <Content Include="Img\topleft.jpg" />
+    <Content Include="Img\top_bg.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="Left.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="NeatUpLoad\cancel.png" />
+    <Content Include="NeatUpLoad\cancel2.png" />
+    <Content Include="NeatUpLoad\cleardot.gif" />
+    <Content Include="NeatUpLoad\default.css" />
+    <Content Include="NeatUpLoad\default_bak.css" />
+    <Content Include="NeatUpLoad\dsoframer.ocx" />
+    <Content Include="NeatUpLoad\Error413.aspx" />
+    <Content Include="NeatUpLoad\NeatUpload.js" />
+    <Content Include="NeatUpLoad\Progress.aspx" />
+    <Content Include="NeatUpLoad\Progress.js" />
+    <Content Include="NeatUpLoad\Progress_bak.aspx" />
+    <Content Include="NeatUpLoad\refresh.png" />
+    <Content Include="NeatUpLoad\SmoothProgress.aspx" />
+    <Content Include="NeatUpLoad\stop_refresh.png" />
+    <Content Include="NeatUpLoad\SWFUpload-license.txt" />
+    <Content Include="NeatUpLoad\SWFUpload.js" />
+    <Content Include="NeatUpLoad\SWFUpload.swf" />
+    <Content Include="PageOU\PG_Company.aspx" />
+    <Content Include="PageOU\UC_Company.ascx" />
+    <Content Include="Top.aspx" />
+    <Content Include="WorkflowMenu\Finance\UC_FinanceDeptFee.ascx" />
+    <Content Include="WorkflowMenu\ProgramFileMaintain\UC_ProgramFileInfo.ascx" />
+    <Content Include="WorkflowMenu\ProgramFileMaintain\UC_ProgramType.ascx" />
+    <Content Include="WorkflowMenu\ProgramFileMaintain\UC_ProgramTypeSub.ascx" />
+    <Content Include="PageWF\UC_CommentList.ascx" />
+    <Content Include="WorkFlow\Finance\UC_FinanceCCBX.ascx" />
+    <Content Include="WorkFlow\Finance\UC_FinanceHWBX.ascx" />
+    <Content Include="WorkFlow\Finance\UC_FinanceZDBX.ascx" />
+    <Content Include="WorkFlow\Finance\UC_CCBXDetailOne.ascx" />
+    <Content Include="WorkFlow\Finance\UC_CCBXDetail.ascx" />
+    <Content Include="WorkFlow\Finance\UC_FinanceJK.ascx" />
+    <Content Include="WorkFlow\Receive\ReDetail\UC_ReDetail.ascx" />
+    <Content Include="WorkFlow\Receive\ReDetail\UC_Step.ascx" />
+    <Content Include="WorkFlow\Receive\Register\UC_Register.ascx" />
+    <Content Include="WorkFlow\Receive\UC_CompanyReceive.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FS.ADIM.OA.BLL\FS.ADIM.OA.BLL.csproj">
+      <Project>{791F8D12-276C-46A9-B41E-B3C3306D92F8}</Project>
+      <Name>FS.ADIM.OA.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FS.ADIM.OA.MOSSS\FS.ADIM.OA.MOSSS.csproj">
+      <Project>{6D68252F-F339-4A1C-9136-8A9A40F32457}</Project>
+      <Name>FS.ADIM.OA.MOSSS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FS.ADIM.OU.OutBLL\FS.ADIM.OU.OutBLL.csproj">
+      <Project>{28411C5E-59F1-4E1E-9162-6C878DDF9E96}</Project>
+      <Name>FS.ADIM.OU.OutBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FS.OA.Framework\FS.OA.Framework.csproj">
+      <Project>{C8AC33E4-7FA2-4438-9733-AD885FA89F35}</Project>
+      <Name>FS.OA.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FS.OA.Framework\FS.OA.Framework.csproj">
+      <Project>{C8AC33E4-7FA2-4438-9733-AD885FA89F35}</Project>
+      <Name>FS.OA.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\Config.ini" />
+    <Content Include="BatchDevolve.aspx" />
+    <Content Include="BatchPrint.aspx" />
+    <Content Include="Config\DevolveConfig.xml" />
+    <Content Include="Config\DevolveRole.xml" />
+    <Content Include="Config\Rank.xml" />
+    <Content Include="Config\SelectGroup.xml" />
+    <Content Include="Css\Attach.css" />
+    <Content Include="Css\Common.css" />
+    <Content Include="Css\Control.css" />
+    <Content Include="Css\FormPage.css" />
+    <Content Include="Css\Images\Loading\loading10.gif" />
+    <Content Include="Css\Images\Loading\loading11.gif" />
+    <Content Include="Css\Images\Loading\loading12.gif" />
+    <Content Include="Css\Left.css" />
+    <Content Include="Css\List.css" />
+    <Content Include="Css\PopPage.css" />
+    <Content Include="Css\Top.css" />
+    <Content Include="Img\bg_nav.gif" />
+    <Content Include="Img\book.gif" />
+    <Content Include="Img\cancel.gif" />
+    <Content Include="Img\clear.gif" />
+    <Content Include="Img\closeUp.gif" />
+    <Content Include="Img\down.gif" />
+    <Content Include="Img\err3.gif" />
+    <Content Include="Img\err6.jpg" />
+    <Content Include="Img\err7.gif" />
+    <Content Include="Img\fold.gif" />
+    <Content Include="Img\folder.gif" />
+    <Content Include="Img\ico.gif" />
+    <Content Include="Img\img.gif" />
+    <Content Include="Img\in-bottombg.jpg" />
+    <Content Include="Img\i_add.gif" />
+    <Content Include="Img\i_attachment.gif" />
+    <Content Include="Img\i_audit.gif" />
+    <Content Include="Img\i_authorize.gif" />
+    <Content Include="Img\i_back.gif" />
+    <Content Include="Img\i_button_bg.gif" />
+    <Content Include="Img\i_button_bg_l.gif" />
+    <Content Include="Img\i_copy.gif" />
+    <Content Include="Img\i_date.gif" />
+    <Content Include="Img\i_delete.gif" />
+    <Content Include="Img\i_download.gif" />
+    <Content Include="Img\i_edit.gif" />
+    <Content Include="Img\i_export.gif" />
+    <Content Include="Img\i_flow.gif" />
+    <Content Include="Img\i_help.gif" />
+    <Content Include="Img\i_import.gif" />
+    <Content Include="Img\i_info_view.gif" />
+    <Content Include="Img\i_left.gif" />
+    <Content Include="Img\i_list.gif" />
+    <Content Include="Img\i_Maintenance.gif" />
+    <Content Include="Img\i_move.gif" />
+    <Content Include="Img\i_ok.gif" />
+    <Content Include="Img\i_print.gif" />
+    <Content Include="Img\i_refuse.gif" />
+    <Content Include="Img\i_release.gif" />
+    <Content Include="Img\i_reply.gif" />
+    <Content Include="Img\i_right.gif" />
+    <Content Include="Img\i_run.gif" />
+    <Content Include="Img\i_save.jpg" />
+    <Content Include="Img\i_search.gif" />
+    <Content Include="Img\i_sheet.gif" />
+    <Content Include="Img\i_shortButton.gif" />
+    <Content Include="Img\i_table_partition.gif" />
+    <Content Include="Img\i_tree.gif" />
+    <Content Include="Img\i_update.gif" />
+    <Content Include="Img\i_upgrade.gif" />
+    <Content Include="Img\i_upload.gif" />
+    <Content Include="Img\i_wrap.gif" />
+    <Content Include="Img\lead.jpg" />
+    <Content Include="Img\left.gif" />
+    <Content Include="Img\loading.gif" />
+    <Content Include="Img\loading11.gif" />
+    <Content Include="Img\loading12.gif" />
+    <Content Include="Img\LogoTo.jpg" />
+    <Content Include="Img\menu_bta.gif" />
+    <Content Include="Img\menu_lista.gif" />
+    <Content Include="Img\orangebg.gif" />
+    <Content Include="Img\resize_down[1].gif" />
+    <Content Include="Img\resize_right[1].gif" />
+    <Content Include="Img\resize_up[1].gif" />
+    <Content Include="Img\right.gif" />
+    <Content Include="Img\safe_openwindow.gif" />
+    <Content Include="Img\safe_safe.gif" />
+    <Content Include="Img\safe_unknow.gif" />
+    <Content Include="Img\safe_userlimit.gif" />
+    <Content Include="Img\safe_userlimit_bak.gif" />
+    <Content Include="Img\safe_variable.gif" />
+    <Content Include="Img\search.gif" />
+    <Content Include="Img\sure.gif" />
+    <Content Include="Img\tb_search.gif" />
+    <Content Include="Img\topleft_hn.jpg" />
+    <Content Include="Img\topleft_hn1.jpg" />
+    <Content Include="Img\up.gif" />
+    <Content Include="Img\word.gif" />
+    <Content Include="Js\Common.js" />
+    <Content Include="Js\Drag.js" />
+    <Content Include="Js\LeftMenu.js" />
+    <Content Include="Js\Popup.js" />
+    <Content Include="NeatUpLoad\Images\doc.gif" />
+    <Content Include="NeatUpLoad\Images\file_icon2.gif" />
+    <Content Include="NeatUpLoad\Images\generic.gif" />
+    <Content Include="NeatUpLoad\Images\ic.gif" />
+    <Content Include="NeatUpLoad\Images\icdoc.gif" />
+    <Content Include="NeatUpLoad\Images\icdocx.gif" />
+    <Content Include="NeatUpLoad\Images\icgen.gif" />
+    <Content Include="NeatUpLoad\Images\icgif.gif" />
+    <Content Include="NeatUpLoad\Images\ichtm.gif" />
+    <Content Include="NeatUpLoad\Images\icini.gif" />
+    <Content Include="NeatUpLoad\Images\icjpg.gif" />
+    <Content Include="NeatUpLoad\Images\icpdf.gif" />
+    <Content Include="NeatUpLoad\Images\icpng.gif" />
+    <Content Include="NeatUpLoad\Images\icppt.gif" />
+    <Content Include="NeatUpLoad\Images\icpptx.gif" />
+    <Content Include="NeatUpLoad\Images\ictxt.gif" />
+    <Content Include="NeatUpLoad\Images\icvsd.gif" />
+    <Content Include="NeatUpLoad\Images\icxls.gif" />
+    <Content Include="NeatUpLoad\Images\icxlsx.gif" />
+    <Content Include="NeatUpLoad\Images\icxml.gif" />
+    <Content Include="NeatUpLoad\Images\icxsn.gif" />
+    <Content Include="NeatUpLoad\Images\iczip.gif" />
+    <Content Include="NeatUpLoad\Images\pdf.gif" />
+    <Content Include="NeatUpLoad\Images\ppt.gif" />
+    <Content Include="NeatUpLoad\Images\txt.gif" />
+    <Content Include="NeatUpLoad\Images\xls.gif" />
+    <Content Include="NeatUpLoad\MultiRequestUploadHandler.ashx" />
+    <None Include="Config\config_1.ini" />
+    <None Include="Config\开发Config.ini" />
+    <Content Include="DevolveHandler.ashx" />
+    <None Include="NeatUpLoad\NeatUploadConfig.xsd" />
+    <Content Include="NeatUpLoad\UploadStateStoreHandler.ashx" />
+    <Content Include="NeatUpLoad\Web.config" />
+    <Content Include="PageOU\PG_CompanyMore.aspx" />
+    <Content Include="PageOU\PG_OASelect.aspx" />
+    <Content Include="PageOU\UC_CompanyMore.ascx" />
+    <Content Include="PageOU\UC_OASelect.ascx" />
+    <Content Include="PageOU\PG_Role.aspx" />
+    <Content Include="PageOU\UC_Role.ascx" />
+    <Content Include="PageOU\Test.aspx" />
+    <Content Include="PageWF\FileDownLoad.aspx" />
+    <Content Include="PageWF\PG_FileControl.aspx" />
+    <Content Include="PageWF\UC_FileControl.ascx" />
+    <Content Include="PageWF\UC_Print.ascx" />
+    <Content Include="Service\GetDealingItemCount.asmx" />
+    <Content Include="Service\WSGetCode.asmx" />
+    <Content Include="SetFromsID.aspx" />
+    <Content Include="Template\Process.xml" />
+    <Content Include="Template\SingerCfg.xml" />
+    <Content Include="Template\template.xml" />
+    <None Include="Template\党纪工团收文\公文处理单.docx" />
+    <None Include="Web References\MOSSOA\OA_DocumentService.disco" />
+    <Content Include="Template\SingerCfgProcess.xml" />
+    <Content Include="WorkflowMenu\Circulate\ChuanYueDan.aspx" />
+    <Content Include="WorkflowMenu\Circulate\UC_CirculateList.ascx" />
+    <Content Include="WorkflowMenu\Circulate\UC_WaitReading.ascx" />
+    <Content Include="WorkflowMenu\CompleteFiles\UC_CompletedHandle.ascx" />
+    <Content Include="WorkflowMenu\FormInfoAdd\PG_DataSave.aspx" />
+    <Content Include="WorkflowMenu\FormInfoAdd\UC_FormInfoList.ascx" />
+    <Content Include="WorkflowMenu\PersonalManage\UC_Agent.ascx" />
+    <Content Include="WorkflowMenu\Process\PG_ProcessRelation.aspx" />
+    <Content Include="WorkflowMenu\Process\PG_ProcessStep.aspx" />
+    <Content Include="WorkflowMenu\Process\UC_ProcessDevolve.ascx" />
+    <Content Include="WorkflowMenu\Process\UC_ProcessSearch.ascx" />
+    <Content Include="WorkflowMenu\Report\UC_HSReport.ascx" />
+    <Content Include="WorkflowMenu\Report\UC_Report1.ascx" />
+    <Content Include="WorkflowMenu\ToDoTask\UC_CommonWaitHandle.ascx" />
+    <Content Include="WorkflowMenu\ToDoTask\UC_DraftList.ascx" />
+    <Content Include="WorkflowMenu\ToDoTask\UC_WaitHandle.ascx" />
+    <Content Include="PageWF\PG_SendCard.aspx" />
+    <Content Include="PageWF\UC_SendCard.ascx" />
+    <Content Include="PageWF\UC_Comment.ascx" />
+    <Content Include="PageWF\PG_Comment.aspx" />
+    <Content Include="WorkFlow\Circulate\UC_GoOnCirculate.ascx" />
+    <Content Include="WorkFlow\Circulate\UC_Circulate.ascx" />
+    <Content Include="WorkFlow\Finance\UC_Finance.ascx" />
+    <Content Include="WorkFlow\LetterSend\UC_LetterSend.ascx" />
+    <Content Include="WorkFlow\ProgramFile\PFInfoDetail.aspx" />
+    <Content Include="WorkFlow\ProgramFile\PG_CommentInfo.aspx" />
+    <Content Include="WorkFlow\ProgramFile\PG_SignCommentInfo.aspx" />
+    <Content Include="WorkFlow\ProgramFile\UC1_ProgramFileList.ascx" />
+    <Content Include="WorkFlow\ProgramFile\UC2_ProgramFile.ascx" />
+    <Content Include="WorkFlow\ProgramFile\UCAddInfo.ascx" />
+    <Content Include="WorkFlow\ProgramFile\UC_CommentInfo.ascx" />
+    <Content Include="WorkFlow\ProgramFile\UC_HuiQian.ascx" />
+    <Content Include="WorkFlow\ProgramFile\UC_HuiQianOne.ascx" />
+    <Content Include="WorkFlow\ProgramFile\UC_LDHuiQian.ascx" />
+    <Content Include="WorkFlow\ProgramFile\UC_LDHuiQianOne.ascx" />
+    <Content Include="WorkFlow\Receive\ReDetail\UC_HSReDetail.ascx" />
+    <Content Include="WorkFlow\Receive\Register\UC_HSRegister.ascx" />
+    <Content Include="WorkFlow\Receive\RePrint\UC_RePrint.ascx" />
+    <Content Include="WorkFlow\Receive\UC_LetterReceived.ascx" />
+    <Content Include="WorkFlow\Receive\UC_Receive.ascx" />
+    <Content Include="WorkFlow\RequestReport\UC_RequestReport.ascx" />
+    <Content Include="WorkFlow\Send\UC_CompanySend.ascx" />
+    <Content Include="WorkFlow\Send\UC_Send.ascx" />
+    <Content Include="WorkFlow\WorkRelation\PG_SignCommentInfo.aspx" />
+    <Content Include="WorkFlow\WorkRelation\UCAddInfo.ascx" />
+    <Content Include="WorkFlow\WorkRelation\UC_CommentInfo.ascx" />
+    <Content Include="WorkFlow\WorkRelation\UC_HuiQian.ascx" />
+    <Content Include="WorkFlow\WorkRelation\UC_HuiQianOne.ascx" />
+    <Content Include="WorkFlow\WorkRelation\UC_WorkRelation.ascx" />
+    <None Include="PageWF\Office\Editor.msi" />
+    <None Include="PageWF\Office\Editor.zip" />
+    <None Include="Print\配置服务器WORD组件权限.docx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Template\党纪工团发文\党委请示模版.docx" />
+    <None Include="Template\党纪工团发文\党委部门文件模版.docx" />
+    <None Include="Template\党纪工团发文\文件处理单\党纪工团发文表单.docx" />
+    <None Include="Template\党纪工团发文\海南党委文件模版.docx" />
+    <None Include="Template\党纪工团发文\海南共青团文件模版.docx" />
+    <None Include="Template\党纪工团发文\海南工会请示模版.docx" />
+    <None Include="Template\党纪工团发文\海南纪委文件模版.docx" />
+    <None Include="Template\党纪工团收文\文件处理单\党纪工团收文表单_temp.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\公司发文\会议纪要模版.docx" />
+    <None Include="Template\公司发文\公文函模版.docx" />
+    <None Include="Template\公司发文\公文报告模版.docx" />
+    <None Include="Template\公司发文\公文请示模版.docx" />
+    <None Include="Template\公司发文\公文通知模版.docx" />
+    <None Include="Template\公司发文\公文首页纸.docx" />
+    <None Include="Template\公司发文\工程会议纪要.docx" />
+    <None Include="Template\公司发文\文件处理单\公司发文表单.docx" />
+    <None Include="Template\公司发文\简报模版.docx" />
+    <None Include="Template\公司发文\简讯模版.docx" />
+    <None Include="Template\公司收文\公文处理单.docx" />
+    <None Include="Template\公司收文\文件处理单\公司收文表单.docx" />
+    <None Include="Template\函件发文\文件处理单\函件发文表单.docx" />
+    <None Include="Template\函件收文\文件处理单\函件收文表单.docx" />
+    <None Include="Template\工作联系单\工作联系单.docx" />
+    <None Include="Template\工作联系单\文件处理单\工作联系单表单.docx" />
+    <None Include="Template\程序文件\文件处理单\程序审查意见落实表.docx" />
+    <None Include="Template\程序文件\文件处理单\程序文件表单.docx" />
+    <None Include="Template\程序文件\文件处理单\管理程序封面模板.docx" />
+    <None Include="Template\程序文件\程序审查意见落实表.docx" />
+    <None Include="Template\程序文件\管理程序封面模板.docx" />
+    <None Include="Template\请示报告\公司报告.docx" />
+    <None Include="Template\请示报告\公司请示.docx" />
+    <None Include="Template\请示报告\文件处理单\请示报告表单.docx" />
+    <None Include="Web References\MOSSOA\DictionaryEntry.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MOSSOA\OA_DocumentService.wsdl" />
+    <None Include="Web References\MOSSOA\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web_1.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.29.129.62:47/OA_DocumentService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MOSSOA\</RelPath>
+      <UpdateFromURL>http://172.29.129.62:47/OA_DocumentService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FS_ADIM_OA_WebUI_MOSSOA_OADocumentService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Download\tmp\" />
+    <Folder Include="Log\" />
+    <Folder Include="Template\Singer\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>23021</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

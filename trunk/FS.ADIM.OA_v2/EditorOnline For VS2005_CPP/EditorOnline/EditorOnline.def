@@ -1,0 +1,9 @@
+; EditorOnline.def : 定义模块参数。
+
+LIBRARY      "EditorOnline.OCX"
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE

@@ -1,0 +1,185 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""EditorOnline.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,6,7,0
+ PRODUCTVERSION 2,6,7,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "方正软件(苏州)"
+            VALUE "FileDescription", "在线编辑"
+            VALUE "FileVersion", "2, 6, 7, 0"
+            VALUE "InternalName", "EditorOnline.ocx"
+            VALUE "LegalCopyright", "FounderSoftware保留所有权利。"
+            VALUE "OriginalFilename", "EditorOnline.ocx"
+            VALUE "ProductName", "Editor"
+            VALUE "ProductVersion", "2.6.7.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_EDITORONLINE        BITMAP                  "EditorOnlineCtrl.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_EDITORONLINE DIALOG  0, 0, 250, 62
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体, MS Sans Serif"
+BEGIN
+    LTEXT           "TODO: 将用于操作 EditorOnline Control 的属性的控件放置在此对话框上。",IDC_STATIC,7,25,229,16
+END
+
+IDD_DLG_DOCMGR DIALOGEX 0, 0, 352, 234
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "在线编辑 v2.6.7.0"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,291,202,50,14
+    PUSHBUTTON      "取消",IDCANCEL,240,202,50,14,NOT WS_VISIBLE | WS_DISABLED
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,19,334,183,WS_EX_LEFTSCROLLBAR | WS_EX_STATICEDGE
+    LTEXT           "注:单击一次选中，再次单击可编辑",IDC_STATIC,7,203,125,11
+    CTEXT           "名    称(不可空)",IDC_STATIC,7,7,83,13,0,WS_EX_DLGMODALFRAME
+    CTEXT           "编    码",IDC_STATIC,90,7,80,13,0,WS_EX_DLGMODALFRAME
+    CTEXT           "页    数",IDC_STATIC,170,7,78,13,0,WS_EX_DLGMODALFRAME
+    LTEXT           "状态栏",IDC_STATUS,7,217,334,10,NOT WS_VISIBLE,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC,248,7,93,13,0,WS_EX_DLGMODALFRAME
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_DOCMGR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 341
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_EDITORONLINE        "EditorOnline Control"
+    IDS_EDITORONLINE_PPG    "EditorOnline Property Page"
+    IDS_ERR_WSREF_INVALID   "WebServices引用地址无效"
+    IDS_ERR_DOCLIB_PARAM    "文档库参数出错"
+    IDS_ERR_CHECKOUT        "签出操作失败"
+    IDS_ERR_CHECKIN         "签入操作失败"
+    IDS_ERR_CHKOUTFILE_CLOSED "可能签出的文件尚未关闭"
+    IDS_ERR_DELETE          "删除操作失败"
+    IDS_ERR_OUTOFLENGTH     "上传文件路径以及名称过长\r\n上传文件路径以及名称不能超过255字节"
+    IDS_ERR_READ_UPLOADFILE "读取待上传文件失败"
+    IDS_ERR_FILE_INVALID    "不允许上传文件大小为‘零’的空文件"
+    IDS_ERR_UPLAOD          "上传失败"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EDITORONLINE_PPG_CAPTION "常规"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "EditorOnline.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

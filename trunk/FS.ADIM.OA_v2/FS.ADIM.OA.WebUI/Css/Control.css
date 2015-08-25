@@ -1,0 +1,22 @@
+/**Dropdownlist**/
+.dropdownlist_blue { background: #E9F8F7; }
+.dropdownlist_yellow { background: #FFFFCC; margin: 0px 5px 2px 0px; }
+.dropdownlist_green { background: #E9F8F7; margin: 0px 5px 2px 0px; }
+/**TextBox**/
+.txtbox_blue { border: 1px inset #ccc; margin: 0px 2px 2px 0px; width: 60px; background: #E9F8F7;padding:1px; }
+.txtbox_yellow { border: 1px inset #ccc; margin: 0px 2px 2px 0px; width: 60px; background: #FFFFCC; padding:1px;}
+.txtbox_bgreen { border: 1px inset #ccc; margin: 0px 2px 2px 0px; width: auto; background: #E9F8F7; padding:1px;}
+.txtPreview { border: 0px; border-bottom: 1px dashed #000; padding-left: 2px; }
+/**Label**/
+.label { border: 0px inset #000; margin: 0x 0px 2px 0px; }
+.label_title_red { margin: 0px 0px 2px 0px; height: auto; width: auto; background: #fff; font-weight: bold; color: red; }
+.label_title_darkblue { margin: 0px 0px 2px 0px; height: auto; width: auto; font-size: 14px; font-weight: bolder; color: #003366; }
+.label_title_bold { font-weight: bolder; color: #555; }
+/**Button**/
+.btn { border: #cccccc 0px inset; height: 22px; width: 65px; background: url(../Img/i_button_bg.gif) repeat left top; font-weight: bold; text-align: center;  cursor: pointer; margin: 0px 0px 2px 0px;color:#FFFFFF; }
+.btn_long { border: #cccccc 0px inset; height: 22px; width: 81px; background: url(../Img/i_button_bg_l.gif) repeat left top; font-weight: bold; text-align: center;  cursor: pointer; margin: 0px 0px 2px 0px;color:#FFFFFF; }
+.btn_short_person { border: #cccccc 0px inset;  height: 16px; width: 16px; background: url(../Img/i_authorize.gif) repeat left top; cursor: pointer;margin-bottom:3px;}
+/**TextArea**/
+.textarea_blue { border: #cccccc 1px inset; margin: 0px 0px 2px 0px; background: #E9F8F7;padding:1px; }
+.textarea_yello { border: #cccccc 1px inset; margin: 0px 0px 2px 0px; background: #FFFFCC; padding:1px;}
+.textarea_bgreen { border: #cccccc 1px inset; margin: 0px 0px 2px 0px; background: #E9F8F7;padding:1px; }

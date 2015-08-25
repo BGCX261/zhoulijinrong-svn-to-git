@@ -1,0 +1,5 @@
+D:\HNPCADIM\FS.ADIM.OA\TestProject1\bin\Debug\TestProject1.dll
+D:\HNPCADIM\FS.ADIM.OA\TestProject1\bin\Debug\TestProject1.pdb
+D:\HNPCADIM\FS.ADIM.OA\TestProject1\obj\Debug\ResolveAssemblyReference.cache
+D:\HNPCADIM\FS.ADIM.OA\TestProject1\obj\Debug\TestProject1.dll
+D:\HNPCADIM\FS.ADIM.OA\TestProject1\obj\Debug\TestProject1.pdb

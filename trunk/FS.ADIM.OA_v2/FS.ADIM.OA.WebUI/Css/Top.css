@@ -1,0 +1,27 @@
+﻿/***************logo图标栏  start****************************/
+.table_top { border-collapse: collapse; border: 0px inset #000; height: auto; width: 100%; background: url( '../Img/top_bg.jpg' ) repeat-x left; text-align: right; }
+.table_top .td_right { padding: 0px 0px 0px 0px; height: auto; width: 180px; background: url( '../Img/cnnc.png' ) no-repeat right; }
+.table_top .table_top_left { padding: 0px 0px 0px 0px; height: 59px; width: 600px; background: url( '../Img/topleft.jpg' ) no-repeat left; }
+/***************logo图标栏  end****************************/
+/************************* Top菜单 start *******************************/
+.table_navigationbar { border-collapse: collapse; border: 0px inset #000; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; height: auto; width: 100%; background: url( '../Img/bg_1.gif' ) repeat-x left 50%; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 12px; text-align: right; height: 30px; color: #000; }
+.table_navigationbar .td_left { display: inline; padding: 0px 0px 0px 0px; height: 30px; width: 250px; background: url( '../Img/bg_1.gif' ) repeat-x left; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 12px; text-align: left; color: #000; }
+.img_logon { border: 0px inset #000000; margin: 0px 0px 0px 10px; padding: 3px 0px 0px 26px; float: left; vertical-align: middle; background-image: url(../Img/logon.gif); background-position: top left; background-repeat: no-repeat; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 12px; text-align: right; color: #000000; }
+.table_navigationbar .td_right { }
+.table_navigationbar .td_right ul { }
+.table_navigationbar .td_right li { margin: 0 0 0 10px; display: inline; vertical-align: middle; list-style: none outside disc; background-position: center left; background-repeat: no-repeat; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 12px; float: right; }
+.table_navigationbar .td_right li a { cursor: pointer; }
+.table_navigationbar .td_right li a:visited { /*color: red;*/ }
+.table_navigationbar .td_right li a:hover { text-decoration: none; }
+.table_navigationbar .td_right li.selected a { color: Red; cursor: default; font-weight: Bold; }
+.table_navigationbar .td_right li.selected a:hover { color: Red; cursor: default; font-weight: Bold; text-decoration: none; }
+.img_dc { padding: 3px 0 0 20px; background-image: url(../Img/sys_dc.gif); }
+.img_oa { padding: 3px 0 0 20px; background-image: url(../Img/sys_oa.gif); }
+.img_ss { padding: 3px 0 0 20px; background-image: url(../Img/sys_search.gif); }
+.img_dp { padding: 3px 0 0 20px; background-image: url(../Img/sys_dp.gif); }
+.img_bi { padding: 3px 0 0 20px; background-image: url(../Img/sys_bi.gif); }
+.img_sm { padding: 3px 0 0 20px; background-image: url(../Img/sys_sm.gif); }
+.img_help { padding: 3px 0 0 15px; background-image: url(../Img/sys_help.gif); }
+.img_logoff { padding: 3px 10px 0 20px; background-image: url(../Img/logoff.gif); }
+.img_org { padding: 3px 0px 0 20px; background-image: url(../Img/sys_org.gif); }
+/************************* Top菜单 end *******************************/

@@ -1,0 +1,181 @@
+﻿<Signer>
+  <Process Name="程序文件">
+    <Template Name="程序审查意见落实表">
+    </Template>
+  </Process>
+  
+  <Process Name="党纪工团发文">
+    <Template Name="党群工作全例会会议纪要模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="党群简报模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="党委部门文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="党委公文首页纸模板">
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="SignDate">签发：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" >会签：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="VerifyDate">核稿：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="CheckDraftDate">审稿|right</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="DraftDate">拟及稿电人话|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="党委会议纪要模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="党委请示模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="党政联席会纪要模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="工会首页纸">
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="SignDate">签发：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" >会签：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="VerifyDate">核稿：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="CheckDraftDate">审稿|right</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="DraftDate">拟及稿电人话|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="共青团首页纸">
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="SignDate">签发：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" >会签：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="VerifyDate">核稿：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="CheckDraftDate">审稿|right</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="DraftDate">拟及稿电人话|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="海南党委文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="海南工会请示模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="海南共青团文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="海南纪委文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="纪律检查委员会首页纸">
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="SignDate">签发：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" >会签：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="VerifyDate">核稿：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="CheckDraftDate">审稿|right</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" StampName="DraftDate">拟及稿电人话|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="海南工会文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="海南共青团请示文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+    <Template Name="海南纪委请示文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" >打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" >校对：|right</Singer>
+    </Template>
+  </Process>
+
+  <Process Name="党纪工团收文">
+    <Template Name="党纪工团收文表单">
+      <Singer Left="0" Top="0" Width="90" Height="30" StampName="DraftDate">党群工作处处长：|right</Singer>
+      <Singer Left="0" Top="0" Width="90" Height="30">公司领导：|right</Singer>
+    </Template>
+  </Process>
+
+  <Process Name="工作联系单">
+    <Template Name="工作联系单">
+      <Singer Left="-10" Top="0" Width="80" Height="20" StampName="DraftDate">编写:|right</Singer>
+      <Singer Left="-10" Top="0" Width="80" Height="20" StampName="CheckDate">校核:|right</Singer>
+      <Singer Left="-10" Top="0" Width="80" Height="20" StampName="ConfirmDate">审定:|right</Singer>
+    </Template>
+  </Process>
+  
+  <Process Name="公司发文">
+    <Template Name="工程会议纪要">
+      <Singer Left="0" Top="0" Width="100" Height="40">  打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40">校对：|right</Singer>
+    </Template>
+    <Template Name="公文报告模版">
+      <Singer Left="0" Top="0" Width="100" Height="40">打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40">校对：|right</Singer>
+    </Template>
+    <Template Name="公文函模版">
+      <Singer Left="0" Top="0" Width="100" Height="40">打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40">校对：|right</Singer>
+    </Template>
+    <Template Name="公文请示模版">
+      <Singer Left="0" Top="0" Width="100" Height="40">打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40">校对：|right</Singer>
+    </Template>
+    <Template Name="公文通知模版">
+      <Singer Left="0" Top="0" Width="100" Height="40">打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40">校对：|right</Singer>
+    </Template>
+    <Template Name="会议纪要模版">
+      <Singer Left="0" Top="0" Width="100" Height="40">打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40">校对：|right</Singer>
+    </Template>
+    <Template Name="公文首页纸">
+		  <Singer Left="0" Top="15" Width="120" Height="30" StampName="SignDate">签发：|down</Singer>
+      <Singer Left="5" Top="1" Width="120" Height="30">会签：|down</Singer>
+		  <Singer Left="20" Top="1" Width="120" Height="35" StampName="CheckDate">核稿：|down</Singer>
+		  <Singer Left="10" Top="1" Width="120" Height="35" StampName="VerifyDate">审稿|right</Singer>
+		  <Singer Left="5" Top="1" Width="120" Height="35" StampName="FirstDraftDate;DraftDate">拟稿人及电话|right</Singer>
+		  <Singer Left="0" Top="0" Width="120" Height="40">打字：|right</Singer>
+		  <Singer Left="0" Top="0" Width="120" Height="40">校对：|right</Singer>
+    </Template>
+  </Process>
+
+  <Process Name="函件发文">
+    <Template Name="函件发文表单">
+      <Singer Left="0" Top="0" Width="100" Height="40" StampName="signDate">签发/日期：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40" StampName="niGaoRenDate">拟稿/日期：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40" StampName="heGaoRenDate">核稿/日期：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40" StampName="huiqianDates">会签/日期：|right</Singer>
+    </Template>
+  </Process>
+
+  <Process Name="函件收文">
+    <Template Name="函件收文表单">
+      <Singer Left="0" Top="0" Width="100" Height="30" StampName="LS_Date">批示领导:|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40" StampName="NiBanDate">拟办人:|right</Singer>
+      <Singer Left="0" Top="0" Width="80" Height="40" StampName="LS_Date">领导:|right</Singer>
+      <Singer Left="-15" Top="0" Width="80" Height="40" StampName="UDDeptLeadNameTime">部门领导:|right</Singer>
+      <Singer Left="-15" Top="0" Width="80" Height="40" StampName="UDSectionLeadNameTime">科室领导:|right</Singer>
+      <Singer Left="-15" Top="0" Width="80" Height="40" StampName="UDSectionPeopleNameTime">普通人员:|right</Singer>
+    </Template>
+  </Process>
+
+  <Process Name="请示报告">
+    <Template Name="公司报告">
+      <Singer Left="-20" Top="0" Width="100" Height="40" StampName="DraftDate">编写：|right</Singer>
+      <Singer Left="-20" Top="0" Width="100" Height="40" StampName="ConfirmDate">审定：|right</Singer>
+      <Singer Left="-20" Top="0" Width="100" Height="40" StampName="ConfirmDate">领导批示:|right</Singer>
+    </Template>
+    <Template Name="公司请示">
+      <Singer Left="-20" Top="0" Width="100" Height="40" StampName="DraftDate">编写：|right</Singer>
+      <Singer Left="-20" Top="0" Width="100" Height="40" StampName="ConfirmDate">审定：|right</Singer>
+      <Singer Left="-20" Top="0" Width="100" Height="40" StampName="ConfirmDate">领导批示:|right</Singer>
+    </Template>
+  </Process>
+</Signer>

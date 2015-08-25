@@ -1,0 +1,2246 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FounderSoftware.Framework.Business</name>
+    </assembly>
+    <members>
+        <member name="T:FounderSoftware.Framework.Business.Entity">
+            <summary>
+            <para>抽象业务基类，提供业务的基本操作</para>
+            <para>包含实体持久化、流程控制、事务、动态装载等</para>
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.c_iRecordStatus_Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.c_iRecordStatus_Deleted">
+            <summary>
+            已删除
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetSQL(FounderSoftware.Framework.DataAccess.SQLClauseFactory.Category)">
+            <summary>
+            获取实体的SQL语句
+            </summary>
+            <param name="cate">SQL类型</param>
+            <returns>SQL语句</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SQLSpecial(System.String)">
+            <summary>
+            SQL通配符替换
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.InitDB(System.String,System.String,System.String)">
+            <summary>
+            数据库初始化
+            </summary>
+            <param name="strType">数据库类型：Excel，Access，SQL</param>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <exception cref="T:System.Exception">未知DB类型</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.InitDB(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            数据库初始化
+            </summary>
+            <param name="strType">数据库类型：Excel，Access，SQL</param>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <exception cref="T:System.Exception">未知DB类型</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.InitDB(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            数据库初始化
+            </summary>
+            <param name="strType">数据库类型：Excel，Access，SQL</param>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <param name="iConnectTimeOut">连接时间（秒），默认为10（秒）</param>
+            <exception cref="T:System.Exception">未知DB类型</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SetUser(System.Int32,System.String)">
+            <summary>
+            设置用户信息
+            </summary>
+            <param name="iUserID">用户ID</param>
+            <param name="strUserName">用户名</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.CheckValue(System.Object,System.String)">
+            <summary>
+            根据值类型对其验证,不满足条件时增加错误信息（信息格式：strErrMsg + ": 错误或不能为空"）
+            <para>对于数据型数据，判断是否大于0</para>
+            <para>对于日期型数据，判断是否大于日期型的最小值</para>
+            <para>对于字符型数据，判断是否非空</para>
+            </summary>
+            <param name="obj">值</param>
+            <param name="strErrMsg">错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetRecords(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strField">字段</param>
+            <param name="strCondition">条件，如为空，则查询所有记录</param>
+            <param name="bIncludeDeleted">是否包含已逻辑删除的记录</param>
+            <returns>记录集</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetRecords(System.String,System.String,System.String,System.Boolean,FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strField">字段</param>
+            <param name="strCondition">条件，如为空，则查询所有记录</param>
+            <param name="bIncludeDeleted">是否包含已逻辑删除的记录</param>
+            <param name="enTrans">事务</param>
+            <returns>记录集</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetRecordCount(System.String,System.String,System.Boolean)">
+            <summary>
+            查询表中记录数量
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCondition">条件，如为空，则查询所有记录</param>
+            <param name="bIncludeDeleted">是否包含已逻辑删除的记录</param>
+            <returns>记录数量</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetRecordCount(System.String,System.String,System.Boolean,FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            查询表中记录数量
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCondition">条件，如为空，则查询所有记录</param>
+            <param name="bIncludeDeleted">是否包含已逻辑删除的记录</param>
+            <param name="enTrans">事务</param>
+            <returns>记录数量</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Delete(System.String,System.String,System.Boolean)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCondition">条件，如为空，则删除所有记录</param>
+            <param name="bActual">是否真正删除
+            <para>是－物理删除；否－逻辑删除，在记录上做一个删除标记</para>
+            </param>
+            <returns>受影响的记录条数</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Delete(System.String,System.String,System.Boolean,FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strCondition">条件，如为空，则删除所有记录</param>
+            <param name="bActual">是否真正删除
+            <para>是－物理删除；否－逻辑删除，在记录上做一个删除标记</para>
+            </param>
+            <param name="enTrans">事务</param>
+            <returns>受影响的记录条数</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Update(System.String,System.String,System.String)">
+            <summary>
+            数据更新，返回受影响的记录数
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strNameAndValue">名称和值的对(如 Status=2 或 Status=1, No=2)</param>
+            <param name="strCondition">条件</param>
+            <returns>受影响的记录数</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Update(System.String,System.String,System.String,FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            数据更新，返回受影响的记录数
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="strNameAndValue">名称和值的对(如 Status=2 或 Status=1, No=2)</param>
+            <param name="strCondition">条件</param>
+            <param name="enTrans">事务</param>
+            <returns>受影响的记录数</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.#cctor">
+            <summary>
+            静态构造
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.InitDict(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="strColCode"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.#ctor(System.String,System.Boolean)">
+            <summary>
+            构造
+            </summary>
+            <param name="strTable">表名</param>
+            <param name="bIsMaster">是否为主实体</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.#ctor(System.String,System.Boolean,FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            构造
+            </summary>
+            <param name="strTable">表名</param>
+            <param name="bIsMaster">是否为主实体</param>
+            <param name="oEnTrans">实体事务</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Reset">
+            <summary>
+            实体复位
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.RefreshObjects">
+            <summary>
+            刷新相关实体
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.InitObjs(System.Object[])">
+            <summary>
+            初始化数组
+            </summary>
+            <param name="objs">数组</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.InitEntityInfo">
+            <summary>
+            初始化实体信息
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.InitColumnSelf">
+            <summary>
+            初始化列信息
+            <para>抽象函数，各子类必须通过重载此类</para>
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.InitColumn(System.String,System.String,System.Boolean)">
+            <summary>
+            初始化列
+            </summary>
+            <param name="strCode">代码</param>
+            <param name="strName">名称</param>
+            <param name="bActual">
+            是否为具体存在的列
+            <para>true表示真实列，为表中实际存在的列</para>
+            <para>false表示虚拟列，为表中没有的列，是查询视图中临时生成的列</para>
+            </param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Clone(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            实体复制，返回一个除ID外其余属性都与当前实体一致的新实体
+            </summary>
+            <param name="enNew">新实体</param>
+            <returns>新实体</returns>
+            <exception cref="T:System.Exception">新实体为空或实体类型不一致</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.CloneSelf(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            除默认属性外，各子类的自定义属性在此函数中复制
+            </summary>
+            <param name="enNew">新实体</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.ReadExcel(System.String,System.String)">
+            <summary>
+            读取Excel,返回DataTable
+            </summary>
+            <param name="strFile">文件路径</param>
+            <param name="strSheetName">工作表名</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.RunQuery(System.String)">
+            <summary>
+            执行查询，返回查询结果
+            </summary>
+            <param name="strCmd">查询命令</param>
+            <returns>查询结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.RunQuery(System.String,FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            执行查询，返回查询结果
+            </summary>
+            <param name="strCmd">查询命令</param>
+            <param name="enTrans">实体事务</param>
+            <returns>查询结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.RunQuery(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            执行查询，返回查询结果
+            </summary>
+            <param name="strCmd">查询命令</param>
+            <param name="strType">数据库类型：Excel，Access，SQL</param>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <exception cref="T:System.Exception">未知DB类型</exception>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.RunQuery(System.String,FounderSoftware.Framework.Business.Entity.DBInfo)">
+            <summary>
+            执行查询，返回查询结果
+            </summary>
+            <param name="strCmd">查询命令</param>
+            <param name="oDBInfo">数据库信息</param>
+            <returns>查询结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.RunNoQuery(System.String)">
+            <summary>
+            执行命令，返回受影响的记录数
+            </summary>
+            <param name="strCmd">命令</param>
+            <returns>受影响的记录数</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.RunNoQuery(System.String,FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            执行命令，返回受影响的记录数
+            </summary>
+            <param name="strCmd">命令</param>
+            <param name="enTrans">事务</param>
+            <returns>受影响的记录数</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.RunNoQuery(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            执行命令，返回受影响的记录数
+            </summary>
+            <param name="strCmd">命令</param>
+            <param name="strType">数据库类型：Excel，Access，SQL</param>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <exception cref="T:System.Exception">未知DB类型</exception>
+            <returns>受影响的记录数</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.RunNoQuery(System.String,FounderSoftware.Framework.Business.Entity.DBInfo)">
+            <summary>
+            执行命令，返回受影响的记录数
+            </summary>
+            <param name="strCmd">命令</param>
+            <param name="oDBInfo">数据库信息</param>
+            <returns>受影响的记录数</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.LockTableX(System.String,FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            排它性锁表，通过指定事务锁定指定表
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="enTrans">事务</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.LockTableX">
+            <summary>
+            排它性锁表，通过本事务锁定本表
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Load(System.Int32)">
+            <summary>
+            根据主键值装载
+            </summary>
+            <param name="iID">主键</param>
+            <returns>装载结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.ReLoad">
+            <summary>
+            实体重装载
+            <para>当数据库中一行记录对应多个实体时，可能出现多个实体不同步现象</para>
+            <para>通过此方法，可以使实体跟数据库再同步一次</para>
+            <para>后期可考虑采用实体缓存机制，使实体唯一，解决属性不一致问题</para>
+            </summary>
+            <returns>装载结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Load">
+            <summary>
+            实体装载
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Load(System.Data.DataRow)">
+            <summary>
+            实体装载
+            通过数据库的一行来装载实体属性
+            </summary>
+            <param name="dr"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.LoadString">
+            <summary>
+            实体装载时，外键的相关属性通过此函数实现
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SaveAndDel(FounderSoftware.Framework.Business.Entity.Handler,FounderSoftware.Framework.Business.Entity.Handler,FounderSoftware.Framework.Business.Entity.Handler)">
+            <summary>
+            保存和删除
+            </summary>
+            <param name="hCheck">操作前检查</param>
+            <param name="hOperateFirst">实体本身</param>
+            <param name="hOperateSecond">相关实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Save">
+            <summary>
+            保存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.BeforeSaveCheck">
+            <summary>
+            保存前的检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.BeforeSave">
+            <summary>
+            保存前操作
+            此时实体的ID已生成
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SaveSelf">
+            <summary>
+            保存当前实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SaveSub">
+            <summary>
+            保存子实体及相关实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Delete">
+            <summary>
+            删除实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.BeforeDeleteCheck">
+            <summary>
+            删除前的检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.DeleteSelf">
+            <summary>
+            删除当前实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.DeleteSub">
+            <summary>
+            删除子实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetID">
+            <summary>
+            调用转移
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SaveToDB(System.Boolean)">
+            <summary>
+            实体持久化到数据库
+            </summary>
+            <param name="bDel">是否要删除</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SaveSucceed">
+            <summary>
+            保存成功后(事务已提交)
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.ViewDataBind">
+            <summary>
+            视图数据绑定
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.BaseBind(System.Boolean)">
+            <summary>
+            基本绑定
+            </summary>
+            <param name="bObjToCtrl">绑定方向，true实体绑定到控件；false控件绑定实体</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetBind(System.String)">
+            <summary>
+            获取绑定值
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SetBind(System.String,System.Object)">
+            <summary>
+            设置绑定值
+            </summary>
+            <param name="strColCode">列名</param>
+            <param name="oVal">值</param>
+            <returns>设置结果</returns>
+            <exception cref="T:System.Exception">列名非法</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.BindInit(System.String,System.String)">
+            <summary>
+            绑定项初始化
+            </summary>
+            <param name="strColCode">列代码</param>
+            <param name="strName">列名</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetErrMsgsBySeparator(System.String)">
+            <summary>
+            获取以指定分隔符隔开的错误信息
+            </summary>
+            <param name="strSeparator">分隔符</param>
+            <returns>错误信息</returns>        
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.AddErrMsg(System.String)">
+            <summary>
+            添加错误信息
+            </summary>
+            <param name="strErrMsg"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.InitEnTrans(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            实体事务初始化
+            </summary>
+            <param name="enSource">源实体</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetAction(FounderSoftware.Framework.Business.Entity.Action.ActionLocType)">
+            <summary>
+            获取命令的枚举
+            </summary>
+            <param name="eLocType">命令的类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.InitActions">
+            <summary>
+            初始化命令
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.AddAction(System.String,System.Boolean,FounderSoftware.Framework.Business.Entity.Action.ActionLocType)">
+            <summary>
+            增加命令
+            </summary>
+            <param name="strCaption">标题</param>
+            <param name="bEnabled">是否有效</param>
+            <param name="eLocType">命令可以出现的位置</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.IsNullOrDBNull(System.Object,System.Boolean)">
+            <summary>
+            判断值是否为null或DBNull
+            </summary>
+            <param name="obj">要判断的值</param>
+            <param name="bString">是否为字符类型</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetVal(System.Int32)">
+            <summary>
+            获取指定位置的值
+            <para>位置错误时，返回null</para>
+            </summary>
+            <param name="iIdx">位置</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetVal(System.String)">
+            <summary>
+            获取指定列名的值
+            <para>位置错误时，返回null</para>
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetValOld(System.String)">
+            <summary>
+            获取指定列名的原值
+            <para>列名错误时，返回null</para>
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.ValIsChanged(System.String)">
+            <summary>
+            值是否变更
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetValInt(System.String)">
+            <summary>
+            获取指定列的Int值
+            <para>列名错误时，返回MinValue</para>
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetValStr(System.String)">
+            <summary>
+            获取指定列的String值
+            <para>列名错误时，返回MinValue</para>
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetValFloat(System.String)">
+            <summary>
+            获取指定列的Float值
+            <para>列名错误时，返回MinValue</para>
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetValDateTime(System.String)">
+            <summary>
+            获取指定列的DateTime值
+            <para>列名错误时，返回MinValue</para>
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetValBool(System.String)">
+            <summary>
+            获取指定列的Bool值
+            <para>列名错误时，返回false</para>
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetValDecimal(System.String)">
+            <summary>
+            获取指定列的Decimal值
+            <para>列名错误时，返回MinValue</para>
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.GetValBytes(System.String)">
+            <summary>
+            获取指定列的byte[]值
+            <para>列名错误时，返回null</para>
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SetVal(System.Int32,System.Object,FounderSoftware.Framework.Business.Entity.PropValSource)">
+            <summary>
+            设置指定位置的值
+            </summary>
+            <param name="index">位置</param>
+            <param name="v">值</param>
+            <param name="pvs">属性值来源</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SetVal(System.String,System.Object)">
+            <summary>
+            设置指定列名的值
+            </summary>
+            <param name="strColCode">列名</param>
+            <param name="v">值</param>
+            <returns>设置结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SetVal(System.String,System.Object,FounderSoftware.Framework.Business.Entity.PropValSource)">
+            <summary>
+            设置指定列名的值
+            </summary>
+            <param name="strColCode">列名</param>
+            <param name="v">值</param>
+            <param name="pvs">属性值来源</param>
+            <returns></returns>
+            <exception cref="T:System.Exception">列名非法</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.IDSetAndCheck(System.Int32,System.Boolean)">
+            <summary>
+            设置ID,同时是否验证有效性
+            </summary>
+            <param name="iID">主键</param>
+            <param name="bNeedCheck">是否需验证有效性</param>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.SQLSelect">
+            <summary>
+            获取查询语句
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.SQLInsert">
+            <summary>
+            获取插入语句
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.SQLUpdate">
+            <summary>
+            获取更新语句
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.SQLDelete">
+            <summary>
+            获取删除语句
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.DPType">
+            <summary>
+            获取当前DP类型
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.HaveUpdate">
+            <summary>
+            获取或设置是否已更新
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.IsUpdate">
+            <summary>
+            获取是否为更新状态，默认为false
+            <para>true-更新；false-新增</para>
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.InitID">
+            <summary>
+            获取初始主键值，默认为0
+            一般情况不用重载
+            </summary>
+        </member>
+        <member name="E:FounderSoftware.Framework.Business.Entity.SetUserInfo">
+            <summary>
+            设置用户信息，保存前调用
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.ErrMsgs">
+            <summary>
+            获取错误信息的列表
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.ErrMsgsByComma">
+            <summary>
+            获取以逗号隔开的错误信息
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.ErrMsgCount">
+            <summary>
+            获取错误信息的数量
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EnTrans">
+            <summary>
+            获取或设置实体事务
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.Item(System.String)">
+            <summary>
+            获取或设置指定列名的值
+            </summary>
+            <param name="strColCode">列名</param>
+            <returns></returns>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.PropertyCount">
+            <summary>
+            获取实体属性的数量
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.Properties">
+            <summary>
+            获取实体属性的枚举
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.PropertiesValueIsChanged">
+            <summary>
+            获取实体的属性值是否已变更
+            <para>true-至少有一个属性的值已变更；false-所有的属性值都未变更</para>
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.SQLs">
+            <summary>
+            获取事务中SQL语句的集合
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.IsValid">
+            <summary>
+            获取当前实体是否为有效实体
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.IsValidID">
+            <summary>
+            获取是否是有效的ID
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.IsMaster">
+            <summary>
+            获取当前实体是否为主实体
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.MasterEn">
+            <summary>
+            获取当前实体的主实体，默认为当前实体
+            <para>当实体为子实体时，返回其所属的主实体</para>
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.View">
+            <summary>
+            获取或设置实体所属的视图
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.dRow">
+            <summary>
+            获取或设置实体所属的行
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.SN">
+            <summary>
+            获取实体的流水号，在一个集合内唯一标识实体
+            <para>此时实体的主键ID可能未生成</para>
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.DBTableName">
+            <summary>
+            获取或设置表名
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.ID">
+            <summary>
+            获取或设置主键
+            <para>改变实体主键后，实体先清除原属性，自动装载新属性</para>
+            <para>!! 此函数已过时，请使用Load(int iID)装载属性 !!</para>
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.No">
+            <summary>
+            获取或设置编号
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.CreateDate">
+            <summary>
+            获取创建日期
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.CreaterID">
+            <summary>
+            获取创建人号
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.CreaterName">
+            <summary>
+            获取创建人
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EditDate">
+            <summary>
+            获取修改日期
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EditorID">
+            <summary>
+            获取修改人号
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EditorName">
+            <summary>
+            获取修改人
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.RecordStatus">
+            <summary>
+            实体状态
+            1－正常
+            2－已删除
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.SystemOperate">
+            <summary>
+            系统操作，记录操作日志
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.A_SystemOperate">
+            <summary>
+            系统操作
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.EntityMaster">
+            <summary>
+            主实体，可独立存在
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityMaster.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityMaster.#ctor(System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="strTable">表名</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityMaster.#ctor(FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            构造
+            </summary>
+            <param name="oEnTrans">实体事务</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityMaster.#ctor(System.String,FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            构造
+            </summary>
+            <param name="strTable">表名</param>
+            <param name="oEnTrans">实体事务</param>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.A_SystemOperate.TableName">
+            <summary>
+            表名
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.A_SystemOperate.AuxTableName">
+            <summary>
+            辅助日志表名
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.A_SystemOperate.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.A_SystemOperate.InitColumnSelf">
+            <summary>
+            初始化列
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.A_SystemOperate.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.A_SystemOperate.UserName">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.A_SystemOperate.DataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.A_SystemOperate.DataBase">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.A_SystemOperate.Table">
+            <summary>
+            表
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.A_SystemOperate.RowID">
+            <summary>
+            行号
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.A_SystemOperate.Category">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SystemOperate.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SystemOperate.TableIsRecorded(System.String)">
+            <summary>
+            确认此表是否记录日志
+            </summary>
+            <param name="strTable">表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SystemOperate.AddRowOperate(System.Int32,System.String,System.String,System.Int32,FounderSoftware.Framework.Business.Entity.SystemOperate.OpCategory)">
+            <summary>
+            增加一个行操作：增加、删除、修改
+            </summary>
+            <param name="iUserID">用户ID</param>
+            <param name="strUserName">用户姓名</param>
+            <param name="strTable">表名</param>
+            <param name="iRowID">行号</param>
+            <param name="opCategory">分类</param>
+            <returns>写记录结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SystemOperate.AddRowOperate(System.Int32,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            增加一个行操作：增加、删除、修改及其它自定义操作
+            </summary>
+            <param name="iUserID">用户ID</param>
+            <param name="strUserName">用户姓名</param>
+            <param name="strTable">表名</param>
+            <param name="iRowID">行号</param>
+            <param name="strCategory">分类</param>
+            <returns>写记录结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SystemOperate.AddRowOperate(System.Int32,System.String,System.String,System.Int32,FounderSoftware.Framework.Business.Entity.SystemOperate.OpCategory,System.String,System.String)">
+            <summary>
+            增加一个行操作：增加、删除、修改
+            </summary>
+            <param name="iUserID">用户ID</param>
+            <param name="strUserName">用户姓名</param>
+            <param name="strTable">表名</param>
+            <param name="iRowID">行号</param>
+            <param name="opCategory">分类</param>
+            <param name="strDataSource">数据源</param>
+            <param name="strDataBase">数据库</param>
+            <returns>写记录结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SystemOperate.AddRowOperate(System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            增加一个行操作：增加、删除、修改及其它自定义操作
+            </summary>
+            <param name="iUserID">用户ID</param>
+            <param name="strUserName">用户姓名</param>
+            <param name="strTable">表名</param>
+            <param name="iRowID">行号</param>
+            <param name="strCategory">分类</param>
+            <param name="strDataSource">数据源</param>
+            <param name="strDataBase">数据库</param>
+            <returns>写记录结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SystemOperate.SaveAux(FounderSoftware.Framework.Business.Entity.SystemOperate)">
+            <summary>
+            辅助记录
+            </summary>
+            <param name="so"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SystemOperate.AddTableToRecord(System.String)">
+            <summary>
+            增加需记录的表
+            </summary>
+            <param name="strTable">表名</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.SystemOperate.AddTableToRecord(System.String,System.Int32)">
+            <summary>
+            增加需记录的表，同时设置辅助表中的最大记录数
+            </summary>
+            <param name="strTable">表名</param>
+            <param name="iMaxRecordCount">辅助表中的最大记录数量</param>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.SystemOperate.Enabled">
+            <summary>
+            获取或设置全部记录操作日志，默认为false
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.SystemOperate.OpCategory">
+            <summary>
+            操作分类
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.SystemOperate.OpCategory.Insert">
+            <summary>
+            插入
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.SystemOperate.OpCategory.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.SystemOperate.OpCategory.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.DBInfo">
+            <summary>
+            数据库相关信息
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.DBInfo.#ctor(FounderSoftware.Framework.DataAccess.DPType,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dpType">数据库类型</param>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <param name="iConnectTimeOut">连接时间</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.DBInfo.Create(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            根据相关参数，返回DBInfo对象
+            </summary>
+            <param name="strType">数据库类型：Excel，Access，SQL</param>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <exception cref="T:System.Exception">未知DB类型</exception>
+            <returns>DBInfo</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.DBInfo.Create(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            根据相关参数，返回DBInfo对象
+            </summary>
+            <param name="strType">数据库类型：Excel，Access，SQL</param>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <param name="iConnectTimeOut">连接时间（秒），默认为10（秒）</param>
+            <exception cref="T:System.Exception">未知DB类型</exception>
+            <returns>DBInfo</returns>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.DBInfo.DPAccess">
+            <summary>
+            获取DPAccess
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.DBInfo.DPType">
+            <summary>
+            获取当前DP类型
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.DBInfo.DataSource">
+            <summary>
+            获取数据源
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.DBInfo.DataBase">
+            <summary>
+            获取数据库
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.PropValSource">
+            <summary>
+            属性值来源，分为：内部，外部业务、内部DB（由DB直接装载）
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.PropValSource.InnerFromSys">
+            <summary>
+            内部系统生成
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.PropValSource.OuterFromBL">
+            <summary>
+            外部且来源于业务
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.PropValSource.InnerFromDB">
+            <summary>
+            内部且来源于DB
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.GetIDHandler">
+            <summary>
+            获取ID委托
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.UserInfoHandler">
+            <summary>
+            表示处理含有当前实体的方法
+            </summary>
+            <param name="enCurr">当前实体</param>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.BindItem">
+            <summary>
+            绑定项
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.BindItem.#ctor(System.String,System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="strColCode">代码</param>
+            <param name="strColName">名称</param>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.BindItem.ColCode">
+            <summary>
+            获取代码
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.BindItem.ColName">
+            <summary>
+            获取名称
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.BindItem.Val">
+            <summary>
+            获取或设置值
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.EntityTrans">
+            <summary>
+            实体事务类
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.#ctor(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.RestoreDefaultDBInfo">
+            <summary>
+            恢复默认数据库信息
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.AssignDBInfo(FounderSoftware.Framework.Business.Entity.DBInfo)">
+            <summary>
+            指定事务所用的数据库信息
+            </summary>
+            <param name="oDBInfo"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.AssignDBInfo(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            指定事务所用的数据库信息
+            </summary>
+            <param name="strType">数据库类型：Excel，Access，SQL</param>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <exception cref="T:System.Exception">未知DB类型</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.AssignDBInfo(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            指定事务所用的数据库信息
+            </summary>
+            <param name="strType">数据库类型：Excel，Access，SQL</param>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <param name="iConnectTimeOut">连接时间（秒），默认为10（秒）</param>
+            <exception cref="T:System.Exception">未知DB类型</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.Begin">
+            <summary>
+            事务开始
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.ExeCmd(System.String)">
+            <summary>
+            执行无返回值的查询
+            <para>此函数已过时，请使用RunNoQuery函数</para>
+            </summary>
+            <param name="strCmd">SQL命令</param>
+            <returns>受影响的行数</returns>
+            <exception cref="T:System.Exception">事务未开始或命令错误</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.RunNoQuery(FounderSoftware.Framework.DataAccess.ISQLClause)">
+            <summary>
+            执行无返回值的查询
+            </summary>
+            <param name="cla">SQL命令</param>
+            <returns>受影响的行数</returns>
+            <exception cref="T:System.Exception">事务未开始或命令错误</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.RunNoQuery(System.String)">
+            <summary>
+            执行无返回值的查询
+            </summary>
+            <param name="strCmd">SQL命令</param>
+            <returns>受影响的行数</returns>
+            <exception cref="T:System.Exception">事务未开始或命令错误</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.auxRunNoQuery(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.RunQuery(System.String)">
+            <summary>
+            执行查询，返回查询结果
+            </summary>
+            <param name="strCmd">查询命令</param>
+            <returns>查询结果</returns>
+            <exception cref="T:System.Exception">事务未开始或命令错误</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.IsSelectCmd(System.String)">
+            <summary>
+            断断是否为查询语句
+            </summary>
+            <param name="strCmd">语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.Commit">
+            <summary>
+            事务提交
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.Rollback">
+            <summary>
+            事务回滚
+            </summary>
+            <exception cref="T:System.Exception">事务异常</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.End">
+            <summary>
+            事务结束
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.CheckDP(System.String,System.Boolean)">
+            <summary>
+            检查当前事务是否可用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.EndTempDP(System.Boolean)">
+            <summary>
+            关于临时打开的事务
+            </summary>
+            <param name="bSucceed">是否成功</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.SaveAndException">
+            <summary>
+            保存时发生异常
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.AddEntity(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            添加实体
+            </summary>
+            <param name="en">实体</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.ClearID(System.String)">
+            <summary>
+            清除指定表ID的缓存
+            </summary>
+            <param name="strTable">表名</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.GetID(System.String,FounderSoftware.Framework.Business.Entity.GetIDHandler)">
+            <summary>
+            获取指定表的ID
+            </summary>
+            <param name="strTable">表名</param>
+            <param name="getID"></param>
+            <returns>ID</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.AddErrMsg(System.String)">
+            <summary>
+            添加错误信息
+            </summary>
+            <param name="strErrMsg">错误信息</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityTrans.GetErrMsgsBySeparator(System.String)">
+            <summary>
+            获取以指定分隔符隔开的错误信息
+            </summary>
+            <param name="strSeparator">分隔符</param>
+            <returns>错误信息</returns>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EntityTrans.Current">
+            <summary>
+            获取当前数据库信息
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EntityTrans.IsActive">
+            <summary>
+            获取事务是否处于活动状态
+            <para>活动的，事务开始后的状态</para>
+            <para>非活动的，事务未开始 或 事务已提交 或 事务已回滚的状态</para>
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EntityTrans.ErrMsgs">
+            <summary>
+            获取错误信息列表
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EntityTrans.ErrMsgsByComma">
+            <summary>
+            获取以逗号隔开的错误信息
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EntityTrans.SQLs">
+            <summary>
+            获取事务中SQL语句的集合
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EntityTrans.IsBatch">
+            <summary>
+            获取或设置是否为批处理，即将事务中的所有SQL语句是否在提交时一次性执行，适用于批量插入、删除、修改、更新
+            <para>默认为false</para>
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.Action">
+            <summary>
+            命令，即实体支持的操作
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.Action.#ctor(System.String,System.String,System.Boolean,FounderSoftware.Framework.Business.Entity.Action.ActionLocType)">
+            <summary>
+            构造
+            </summary>
+            <param name="strName">名称</param>
+            <param name="strCaption">标题</param>
+            <param name="bEnabled">是否可用</param>
+            <param name="eLocType">位置</param>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.Action.Name">
+            <summary>
+            名称，内部用
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.Action.Caption">
+            <summary>
+            标题，显示用
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.Action.Enabled">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.Action.LocType">
+            <summary>
+            位置
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.Action.ActionLocType">
+            <summary>
+            命令的位置类型
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.Action.ActionLocType.Input">
+            <summary>
+            输入界面
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.Action.ActionLocType.List">
+            <summary>
+            列表界面
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.Entity.Action.ActionLocType.InputAndList">
+            <summary>
+            输入及列表界面
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.Entity.EntityProperty">
+            <summary>
+            实体属性
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.Entity.EntityProperty.#ctor(FounderSoftware.Framework.Business.Entity,System.String,System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="oEn">实体</param>
+            <param name="strCode">代码</param>
+            <param name="strName">名称</param>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EntityProperty.Code">
+            <summary>
+            获取属性的代码
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EntityProperty.Name">
+            <summary>
+            获取属性的名称
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.Entity.EntityProperty.Value">
+            <summary>
+            获取属性的值
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.ViewBase">
+            <summary>
+            视图的抽象基类，实现数据库查询、查询分页、实体生成等功能
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.SetValAndNeedRefresh(System.String@,System.String)">
+            <summary>
+            赋值且需要刷新
+            </summary>
+            <param name="strField">字段</param>
+            <param name="strValue">值</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.GetItem(System.Int32)">
+            <summary>
+            获取指定位置的实体，位置错误返回空
+            <para>等同于GetItemByIndex</para>
+            </summary>
+            <param name="iIdx">位置下标</param>
+            <returns>实体，位置错误返回空</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.GetItemByIndex(System.Int32)">
+            <summary>
+            获取指定位置的实体，位置错误返回空
+            </summary>
+            <param name="iIdx">位置下标</param>
+            <returns>实体，位置错误返回空</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.GetItemBySN(System.String)">
+            <summary>
+            获取实体流水号对应的实体
+            </summary>
+            <param name="strSN">实体流水号</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.GetItemByID(System.Int32)">
+            <summary>
+            获取主键对应的实体
+            </summary>
+            <param name="iID">主键</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.SubQuery(System.String)">
+            <summary>
+            子查询，根据条件在当前查询中进行子查询，返回实体的枚举
+            </summary>
+            <param name="strCondition">条件</param>
+            <returns>实体的枚举</returns>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.ViewBase.c_strRowKey">
+            <summary>
+            RowKey
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.AddItem">
+            <summary>
+            新增一个实体, 位置在头部
+            </summary>
+            <returns>实体</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.AddItem(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            加入一个已存在的实体对象,返回加入的结果
+            true表示加入成功,false表示加入失败
+            </summary>
+            <param name="en">实体对象</param>
+            <returns>加入结果</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.RemoveItemAt(System.Int32)">
+            <summary>
+            移除指定位置的实体对象
+            </summary>
+            <param name="iIdx">位置信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.RemoveItem(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            移除指定的实体
+            </summary>
+            <param name="en">实体信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.Clear">
+            <summary>
+            移除所有的实体
+            <para>通过内部调用实体的Delete，验证删除时的逻辑</para>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.Clear(System.Boolean)">
+            <summary>
+            批量删除实体，不通过实体的Delete验证删除逻辑
+            <para>如查询中未包含ID字段，此功能失效</para>
+            </summary>
+            <param name="bActual">是否真正删除
+            <para>是－物理删除；否－逻辑删除，在记录上做一个删除标记</para>
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.GetFieldVals(System.String,System.String)">
+            <summary>
+            获取指定字段以指定字符分隔的字符串
+            </summary>
+            <param name="strField">字段名</param>
+            <param name="strSeparator">分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.GetFieldVals(System.String)">
+            <summary>
+            获取指定字段值，以字符数组形式返回
+            <para>无此字段时，返回空</para>
+            </summary>
+            <param name="strField">字段</param>
+            <returns>字符数组</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.NewItem(System.Data.DataRow)">
+            <summary>
+            根据行信息生成一个实体
+            </summary>
+            <param name="row">行信息</param>
+            <returns>行对应的实体</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.GeneDataRow">
+            <summary>
+            生成实体对应的行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.SetRowKey(System.Data.DataRow)">
+            <summary>
+            设置行主键
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.NeedRefresh">
+            <summary>
+            需要刷新数据
+            场景：改变查询条件、查询字段、当前页、强制查询等
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.ReQuery">
+            <summary>
+            强制再查询
+            <para>使用场景：当前的数据已更新</para>
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.Fuzzy(System.String)">
+            <summary>
+            模糊查询
+            </summary>
+            <param name="strFuzzy">模糊参数</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.Page_Result(System.Data.DataTable)">
+            <summary>
+            分页结果
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.Refresh">
+            <summary>
+            执行查询，刷新数据
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.InitElement(System.String,System.String,System.String,System.TypeCode,System.Boolean)">
+            <summary>
+            初始化字段元素
+            </summary>
+            <param name="strName">别名</param>
+            <param name="strActualName">表名.列名</param>
+            <param name="strCaption">显示名</param>
+            <param name="eType">类型</param>
+            <param name="bInner">是否内部用</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.GetElement(System.Boolean,System.TypeCode)">
+            <summary>
+            获取元素
+            </summary>
+            <param name="bInner">是否内部用</param>
+            <param name="eType">类型</param>
+            <returns>元素对象</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.GetElement(System.Int32)">
+            <summary>
+            获取指定位置的元素
+            </summary>
+            <param name="iIdx">下标</param>
+            <returns>下标错误时，返回null</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.GetQueryCond(System.Int32,System.Int32,System.String)">
+            <summary>
+            获取查询条件
+            </summary>
+            <param name="iEleIdx"></param>
+            <param name="iOpIdx"></param>
+            <param name="strVal"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Field">
+            <summary>
+            获取或设置查询的字段
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Table">
+            <summary>
+            获取或设置查询的表
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Join">
+            <summary>
+            设置表连接关系
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.JoinList">
+            <summary>
+            表连接关系列表
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.GroupBy">
+            <summary>
+            获取或设置分组
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Sort">
+            <summary>
+            获取或设置排序方式
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.BaseCondition">
+            <summary>
+            获取或设置查询的基本条件,在复合查询使用
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Condition">
+            <summary>
+            获取或设置查询条件
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Ens">
+            <summary>
+            获取实体的枚举
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Item(System.Int32)">
+            <summary>
+            获取指定位置的实体，位置错误返回空
+            </summary>
+            <param name="iIdx">位置下标</param>
+            <returns>实体，位置错误返回空</returns>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.DtTable">
+            <summary>
+            获取对应的DataTable信息，数据绑定用。
+            暂时使用，后期可考虑直接绑定实体集
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.ErrMsg">
+            <summary>
+            获取查询中的错误信息，正常情况下为空
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Count">
+            <summary>
+            获取记录数量
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.IDs">
+            <summary>
+            获取以","隔开的ID字符串
+            <para>如查询中未查询ID字段，则返回空</para>
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.IsGeneEntity">
+            <summary>
+            是否生成实体，默认为true
+            <para>查询时生成实体的三个条件：重写enCurr属性、查询ID字段、此标志为true</para>
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.enCurr">
+            <summary>
+            获取当前实体，查询的数据生成实体用
+            <para>如不重写此虚属性，则不生成相应实体</para>
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.EnTrans">
+            <summary>
+            获取或设置事务
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.SQL">
+            <summary>
+            获取SQL
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Page">
+            <summary>
+            获取分页对象
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.ViewBase.QueryPage">
+            <summary>
+            查询分页
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.QueryPage.Prepare(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            查询前准备，初始化查询参数
+            </summary>
+            <param name="strField"></param>
+            <param name="strFrom"></param>
+            <param name="strCond"></param>
+            <param name="strGroupBy"></param>
+            <param name="strOrder"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.QueryPage.Run">
+            <summary>
+            普通查询
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.QueryPage.GoTo(FounderSoftware.Framework.Business.ViewBase.QueryPage.PageFlag)">
+            <summary>
+            跳到指定页
+            </summary>
+            <param name="flag">页的标志</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.QueryPage.GoTo(System.Int32)">
+            <summary>
+            跳到指定页
+            </summary>
+            <param name="iPageIdx">页号</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.QueryPage.auxGoTo(System.String)">
+            <summary>
+            辅助跳转
+            </summary>
+            <param name="strInIDCond"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.QueryPage.Page_NeedRefresh">
+            <summary>
+            需要刷新
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.QueryPage.Page_Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.EnTrans">
+            <summary>
+            获取或设置事务
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.Enabled">
+            <summary>
+            获取或设置是否采用分页，默认为false（不分页）
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.ValidFlag">
+            <summary>
+            获取当前有效页标志
+            <para>如：首页、末页是否有效</para>
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.PageIndex">
+            <summary>
+            获取当前页码
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.PageSize">
+            <summary>
+            获取或设置页大小，默认为10
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.PageCount">
+            <summary>
+            获取页数
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.RecordCount">
+            <summary>
+            获取记录数
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.SQL">
+            <summary>
+            获取SQLAdv
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.SQLBase">
+            <summary>
+            获取SQLBase
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.Err">
+            <summary>
+            获取错误信息
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.QueryPage.IsSingle">
+            <summary>
+            设置是否为单表，默认为false
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.ViewBase.QueryPage.PageFlag">
+            <summary>
+            分页标志
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.ViewBase.QueryPage.PageFlag.None">
+            <summary>
+            全部禁用
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.ViewBase.QueryPage.PageFlag.First">
+            <summary>
+            首页
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.ViewBase.QueryPage.PageFlag.Prev">
+            <summary>
+            前页
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.ViewBase.QueryPage.PageFlag.Next">
+            <summary>
+            后页
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.Business.ViewBase.QueryPage.PageFlag.Last">
+            <summary>
+            末页
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.ViewBase.Element">
+            <summary>
+            字段元素
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.Element.#ctor(System.String,System.String,System.String,System.TypeCode,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="strName">名称，内部用，一般为英文</param>
+            <param name="strActualName">名称，内部用，表的实际字段</param>
+            <param name="strCaption">标题，显示用，一般为中文</param>
+            <param name="eType">类型</param>
+            <param name="bInner">是否为内部</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.Element.GetCond(System.Int32,System.String)">
+            <summary>
+            获取条件
+            </summary>
+            <param name="iOpIdx"></param>
+            <param name="strVal"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Element.Name">
+            <summary>
+            获取Name
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Element.ActualName">
+            <summary>
+            获取ActualName
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Element.Caption">
+            <summary>
+            获取Caption
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Element.Type">
+            <summary>
+            获取Type
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Element.Inner">
+            <summary>
+            获取Inner
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Element.CondOps">
+            <summary>
+            获取条件的枚举
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.ViewBase.Element.CondOp">
+            <summary>
+            条件
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewBase.Element.CondOp.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="strName">名称</param>
+            <param name="strVal">值</param>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Element.CondOp.Name">
+            <summary>
+            获取名称
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.ViewBase.Element.CondOp.Val">
+            <summary>
+            获取条件值
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.EntityInfo">
+            <summary>
+            实体信息
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityInfo.#ctor(System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="strCode">实体代码，一般为表名</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityInfo.GetColumnIndex(System.String)">
+            <summary>
+            获取指定列名的索引
+            </summary>
+            <param name="strColumnCode">列名</param>
+            <returns>索引</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityInfo.GetColumnCode(System.Int32)">
+            <summary>
+            获取指定索引列的代码
+            </summary>
+            <param name="iIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityInfo.GetColumnName(System.Int32)">
+            <summary>
+            获取指定列的名称
+            </summary>
+            <param name="iIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityInfo.IsColumnKey(System.Int32)">
+            <summary>
+            指定列是否为主键
+            </summary>
+            <param name="iIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityInfo.GetColInfo(System.Int32)">
+            <summary>
+            获取属性信息
+            </summary>
+            <param name="iIndex">索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityInfo.InitColumn(System.String,System.String,System.Boolean)">
+            <summary>
+            初始化列
+            </summary>
+            <param name="strCode">代码</param>
+            <param name="strName">名称</param>
+            <param name="bIsKey">是否为主键</param>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntityInfo.TableName">
+            <summary>
+            获取或设置表名
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntityInfo.ColumnCount">
+            <summary>
+            列的数量
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntityInfo.ProtoSelectSQL">
+            <summary>
+            获取查询语句的原型
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.EntityInfo.ColumnInfo">
+            <summary>
+            列信息
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityInfo.ColumnInfo.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            构造
+            </summary>
+            <param name="strCode">代码</param>
+            <param name="strName">名称</param>
+            <param name="bIsKey">是否为主键</param>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntityInfo.ColumnInfo.IsKey">
+            <summary>
+            获取是否为主键
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntityInfo.ColumnInfo.Name">
+            <summary>
+            获取名称
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntityInfo.ColumnInfo.Code">
+            <summary>
+            获取代码
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.EntitySet">
+            <summary>
+            实体集，支持实体的枚举
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.GetEntityBySN(System.String)">
+            <summary>
+            获取实体流水号对应的实体
+            </summary>
+            <param name="strSN">实体流水号</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.GetEntityByID(System.Int32)">
+            <summary>
+            获取主键对应的实体
+            </summary>
+            <param name="iID">主键</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.Contains(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            确定实体是否在列表中
+            </summary>
+            <param name="en"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.Add(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            尾部插入实体
+            </summary>
+            <param name="en"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.Insert(System.Int32,FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            指定位置插入实体
+            </summary>
+            <param name="iIdx"></param>
+            <param name="en"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.RemoveAt(System.Int32)">
+            <summary>
+            移除指定位置的实体
+            </summary>
+            <param name="iIdx"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.Remove(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            移除指定实体
+            </summary>
+            <param name="en">实体</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.Clear(System.Boolean)">
+            <summary>
+            移除所有实体
+            </summary>
+            <param name="bIsActual">是否删除实体：true－删除实体，false－仅仅清空集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.GetEnumerator">
+            <summary>
+            返回循环访问实体的枚举数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySet.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            返回循环访问实体的枚举数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntitySet.Item(System.Int32)">
+            <summary>
+            实体集访问器，根据下标返回实体，下标错误返回空
+            </summary>
+            <param name="iIdx">下标</param>
+            <returns>实体，下标错误返回空</returns>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntitySet.Count">
+            <summary>
+            获取实际包含的实体数。
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntitySet.DtTable">
+            <summary>
+            获取对应的DataTable信息
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.ViewSystemOperate">
+            <summary>
+            操作日志视图
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewSystemOperate.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.ViewSystemOperateAux">
+            <summary>
+            辅助操作日志视图
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.ViewSystemOperateAux.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.EntityCache">
+            <summary>
+            实体缓存
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityCache.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityCache.Clear">
+            <summary>
+            清除缓存
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityCache.Get(System.Type,System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="oType">实体类型</param>
+            <param name="iID">实体ID</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityCache.Get(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="oEn">实体</param>
+            <returns>实体</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntityCache.Set(FounderSoftware.Framework.Business.Entity)">
+            <summary>
+            设置实体
+            </summary>
+            <param name="oEn">实体</param>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntityCache.Enabled">
+            <summary>
+            获取或设置是否可用，默认为false
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.Business.EntityCache.Size">
+            <summary>
+            获取或设置大小，初始值为10000
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.Business.EntitySlave">
+            <summary>
+            子实体，必须附属主实体存在
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySlave.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySlave.#ctor(System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="strTable">表名</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySlave.#ctor(FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            构造
+            </summary>
+            <param name="oEnTrans">实体事务</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySlave.#ctor(System.String,FounderSoftware.Framework.Business.Entity.EntityTrans)">
+            <summary>
+            构造
+            </summary>
+            <param name="strTable">表名</param>
+            <param name="oEnTrans">实体事务</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.Business.EntitySlave.ActualSave">
+            <summary>
+            实体保存
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

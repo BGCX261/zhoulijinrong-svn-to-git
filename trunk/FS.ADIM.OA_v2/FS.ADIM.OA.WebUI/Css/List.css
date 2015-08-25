@@ -1,0 +1,56 @@
+/************************页面标题******************************/
+.table_gv_top { border: 0px solid #000; margin: 3px auto; width: 98%; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 12px; }
+/************************表格标题栏****************************/
+.table_gv_title { height: 30px; font-weight: bold; }
+/*******表格标题栏与正文间间隔行******/
+.table_add_partition { height: 10px; background: url(  "../image/i_table_partition.gif" ) repeat-x left; }
+/******中部表格*****************/
+.table_add_mid { border-collapse: collapse; border: 0px inset #000; text-align: left;  }
+.table_add_mid TD { border: 0px inset #000; }
+/*******************************添加修改页面***********************************/
+.table_border { border-collapse: collapse; border: outset 1px #cccccc;  padding: 2px; width: 97%;text-align:left }
+.table_border tr td { border: outset 1px #cccccc; margin: 0px 0px 0px 0px; padding: 0px 3px 0px 3px; }
+.table_border tr th { border: outset 1px #cccccc; margin: 0px 0px 0px 0px; padding: 0px 3px 0px 3px; }
+
+.hrDashed { width: 98%; border: dashed 2px #333; }
+.offsetRight { margin-left: 35px; }
+.offsetRight1 { margin-left: 10px; }
+.leftSpan1 { width: 80px; }
+
+
+/*****************整个GridView定义******************/
+.table_gv { border-collapse: collapse; border: 1px solid #b8b4a3; table-layout: fixed; }
+.table_gv TH { text-align: center; }
+.table_gv TH A { color: White; text-decoration: underline; }
+.table_gv TH A:hover { color: red; text-decoration: underline; }
+.table_gv TD { text-align: left; padding-left: 2px; word-break: break-all; word-wrap: break-word; }
+.table_gv .gv_headStyle { background-color: #4977B4; color: #FFFFFF; }
+.table_gv .width20 { width:50px }
+.table_gv .gv_alternatingrow td { background: #DFE9F3; height: 25px; }
+.table_gv .th_j01 { border: 1px solid #b8b4a3; height: 25px; background: #4977b4; font-weight: bold; text-align: center; color: #fff; }
+.table_gv .th_j001 { border: 1px inset #b8b4a3; padding: 2px; height: 28px; width: 60px; background: #4977b4; font-weight: bold; text-align: center; color: #fff; }
+.table_gv .th_j02 { border: 1px inset #b8b4a3; height: 28px; width: 100px; background: #4977b4; font-weight: bold; color: #fff; }
+.table_gv .th_j02 th { text-align: center; }
+.table_gv .th_j03 { border: 1px inset #b8b4a3; padding: 2px; height: 28px; width: 150px; background: #4977b4; font-weight: bold; text-align: center; color: #fff; }
+.table_gv .th_j04 { border: 1px inset #b8b4a3; padding: 2px; height: 28px; width: 200px; background: #4977b4; font-weight: bold; text-align: center; color: #fff; }
+.table_gv .th_j05 { border: 1px inset #b8b4a3; padding: 2px; height: 28px; width: auto; background: #4977b4; font-weight: bold; text-align: center; color: #fff; }
+.table_gv .th_j06 { border: 1px inset #b8b4a3; padding: 2px; height: 28px; width: 300px; background: #4977b4; font-weight: bold; text-align: center; color: #fff; }
+.table_gv .th_j07 { border: 1px inset #b8b4a3; padding: 2px; height: 28px; width: 280px; background: #4977b4; font-weight: bold; text-align: center; color: #fff; }
+.table_gv .th_j08 { border: 1px inset #b8b4a3; padding: 2px; height: 28px; width: 180px; background: #4977b4; font-weight: bold; text-align: center; color: #fff; }
+.table_gv .tr_j01 { border: 1px inset #b8b4a3; padding: 2px; height: 24px; }
+.table_gv .td_Center { text-align: center; }
+.table_gv .td_Center A { }
+.table_gv .td_j01 { border: 1px solid #b8b4a3; padding: 2px; height: 24px; }
+.table_gv .td_j001 { border: 1px inset #b8b4a3; padding: 2px; height: 24px; width: 60px; }
+.table_gv .td_j02 { border: 1px inset #b8b4a3; padding: 2px; height: 24px; width: 100px; }
+.table_gv .td_j03 { border: 1px inset #b8b4a3; padding: 2px; height: 24px; width: 150px; }
+.table_gv .td_j04 { border: 1px solid #b8b4a3; padding: 2px; width: 150px; }
+.table_gv .td_j05 { border: 1px inset #b8b4a3; padding: 2px; height: 24px; width: auto;  }
+.table_gv .td_j06 { border: 1px inset #b8b4a3; padding: 2px; height: 24px; width: 300px; }
+.table_gv .td_j07 { border: 1px inset #b8b4a3; padding: 2px; height: 24px; width: 280px; }
+.table_gv .td_j08 { border: 1px inset #b8b4a3; padding: 2px; height: 24px; width: 180px; }
+
+.div_gv_tool .a_add{ margin: 0px 0px 0px 10px;padding: 0px 0px 0px 20px;height: 27px;width: auto;background: url(../Img/i_add.gif) no-repeat top left;font-family: Tahoma, Verdana, Arial, Helvetica;font-size: 12px;text-align: right;color: #06c;}
+.div_gv_tool .a_edit{ margin: 0px 0px 0px 10px;padding: 0px 0px 0px 20px;height: 27px;width: auto;background: url(../Img/i_edit.gif) no-repeat top left;font-family: Tahoma, Verdana, Arial, Helvetica;font-size: 12px;text-align: right;color: #06c;}
+.div_gv_tool .a_delete{ margin: 0px 0px 0px 10px;padding: 0px 0px 0px 20px;height: 27px;width: auto;background: url(../Img/i_delete.gif) no-repeat top left;font-family: Tahoma, Verdana, Arial, Helvetica;font-size: 12px;text-align: right;color: #06c;}
+.div_gv_tool .a_search{ margin: 0px 0px 0px 10px;padding: 0px 0px 0px 20px; height: 27px;width: auto;background: url(../Img/i_search.gif) no-repeat top left;font-family: Tahoma, Verdana, Arial, Helvetica;font-size: 12px;text-align: right;color: #06c;}

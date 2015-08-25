@@ -1,0 +1,55 @@
+﻿.hidden { display: none; }
+/*****************************************带边框Table样式*********************************************/
+.table_form_border { border-collapse: collapse; border: solid 1px #000000; text-align: left; }
+.table_form_border td { border: solid 1px #cccccc; padding: 10px; }
+.table_form_border .td_grey { border: solid 1px #000000;  background: #DaDaDa; text-align: center; color: #000; }
+.tab-page { clear: both; border-right: rgb(145, 155, 156) 1px solid; padding-right: 1px; border-top: rgb(145, 155, 156) 1px solid; padding-left: 10px; z-index: 1; padding-bottom: 10px; font: 11px Tahoma; border-left: rgb(145, 155, 156) 1px solid; color: black; padding-top: 10px; border-bottom: rgb(145, 155, 156) 1px solid; position: relative; top: -3px; background-color: white; height: 330; }
+/*****************************************不带边框Table样式**************************************************/
+.table_form_noborder { border-collapse: collapse; border: none 0px #cccccc; }
+.table_form_noborder td { border: none 0px #cccccc; padding: 0px 3px 0px 3px; }
+.table_form_noborder .td_center { border: #cccccc 0px none; padding: 0px 3px 0px 3px; text-align: center; }
+/**************************************************TAB样式**************************************************************/
+.table-plan { border-spacing: 0; border-collapse: collapse; width: 100%; }
+.table-plan .table-plan-left { border-bottom: 1px solid #cccccc; width: 20px; }
+.table-plan .table-plan-mid-short { width: 60px; font-size: 12px; font-weight: bold; text-align: center; }
+.table-plan .table-plan-mid-long { width: 65px; font-size: 12px; font-weight: bold; text-align: center; }
+.table-plan .table-plan-right { border-bottom: 1px solid #cccccc; }
+
+.divCenter { text-align: center; width: 100%; }
+.divSubmit { text-align: center; margin: 2px; padding: 2px; }
+.divSection { margin-bottom: 5px; border: 1px solid black; padding: 1px; }
+.divTitle { background: #C8D0D4; margin-bottom: 6px; height: 25px; line-height: 25px; font-weight: bold; padding-left: 25px; color: #110009; }
+.divProgress { position: absolute; }
+
+/**************************************************会签意见样式**************************************************************/
+.dealSignBar { text-align: center; vertical-align: middle; background: url(../Img/in-bottombg.jpg) repeat-x; height: 15px; padding: 10px 0px 0px 0px; border: 1px solid #E5E5E5; width: 100%; font-weight: bold; color: #333; }
+.dealSignFrame { font-size: 12px; width: 100%; border: 1px solid #E5E5E5; text-align: center; font-size: 12px; }
+.dealSign_tr { font-weight: bold; height: 22px; }
+.dealSign_tr .dealSign_td_num { width: 30px; background-color: #DAE0EB; }
+.dealSign_tr .dealSign_td_user { width: 45px; background-color: #DAE0EB; }
+.dealSign_tr .dealSign_td_comment { background-color: #DAE0EB; }
+.dealSign_tr .dealSign_td_condition { width: 250px; background-color: #DAE0EB; }
+
+.tr_itm { line-height: 2em; }
+.tr_itm .dealSign_td_num2 { text-align: center; width: 30px; background-color: #F2F2F4; }
+.tr_itm .dealSign_td_user2 { width: 45px; background-color: #F2F2F4; }
+.tr_itm .dealSign_td_comment2 { word-break: break-all; word-wrap: break-word; background-color: #F2F2F4; }
+.tr_itm .dealSign_td_condition2 { width: 250px; background-color: #F2F2F4; }
+.lblcontent { word-break: break-all; word-wrap: break-word; }
+.font_red { color: Red; }
+.SheetContent { width: 100%; }
+.LeftSpan { width: 90px; text-align: right; padding-right:10px;}
+.trListHead { }
+.trListHead TD { font-weight: bolder; color: #555;text-align:center; }
+
+.HeadTitle { height: 20px; background-color: #EFF2FA; font-size: 12px; font-weight: bold; }
+.div-label { margin-bottom: -15px; position: relative; top: 0px; left: 0px; height: 12px; }
+.div-plan-frame { border-left: 1px solid #cccccc; border-right: 1px solid #cccccc; border-bottom: 1px solid #cccccc; height: 100px; width: auto; padding-top: 10px; text-align: center; }
+/*弹出层样式*/
+.clsWinR { width: 14px; height: 14px; float: right; margin: 0px; cursor: pointer; background: url(../img/closeUp.gif) no-repeat; margin-top: 3px; margin-right: 5px; }
+.iframeContainer { position: absolute; z-index: 12; top: 0px; left: 0px; filter: alpha(opacity=30); width: 20px; height: 20px; }
+.PopDiv { background-color: #FFF; color: #3d62a6; z-index: 13; border: 1px solid #7395C3; position: absolute; }
+.PopDivTitle { width: 100%; height: 22px; line-height: 22px; background: url(../img/bg_nav.gif) repeat; color: red; text-indent: 5px; }
+.PopDivContent { height: 100%; width: 100%; float: left; margin-left: auto; margin-right: auto; }
+.phrase { margin-right: 10px; float: left; padding: 5px 0px; }
+.printTable td { border: outset 1px #cccccc; padding: 10px 10px 10px 10px; text-align: center; }

@@ -1,0 +1,30 @@
+C:\Documents and Settings\Administrator\桌面\海南OA现场代码\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.dll
+C:\Documents and Settings\Administrator\桌面\海南OA现场代码\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.pdb
+C:\Documents and Settings\Administrator\桌面\海南OA现场代码\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\海南OA现场代码\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.dll
+C:\Documents and Settings\Administrator\桌面\海南OA现场代码\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.pdb
+D:\海南OA现场代码\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.dll
+D:\海南OA现场代码\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.pdb
+D:\海南OA现场代码\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\ResolveAssemblyReference.cache
+D:\海南OA现场代码\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.dll
+D:\海南OA现场代码\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.pdb
+D:\HNPCADIM\FS.ADIM.OA\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.dll
+D:\HNPCADIM\FS.ADIM.OA\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.pdb
+D:\HNPCADIM\FS.ADIM.OA\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\ResolveAssemblyReference.cache
+D:\HNPCADIM\FS.ADIM.OA\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.dll
+D:\HNPCADIM\FS.ADIM.OA\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.pdb
+D:\ADIM\FS.ADIM.OA\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.dll
+D:\ADIM\FS.ADIM.OA\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.pdb
+D:\ADIM\FS.ADIM.OA\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\ResolveAssemblyReference.cache
+D:\ADIM\FS.ADIM.OA\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.dll
+D:\ADIM\FS.ADIM.OA\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.pdb
+D:\HNPC\FS.ADIM.OA\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.dll
+D:\HNPC\FS.ADIM.OA\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.pdb
+D:\HNPC\FS.ADIM.OA\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\ResolveAssemblyReference.cache
+D:\HNPC\FS.ADIM.OA\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.dll
+D:\HNPC\FS.ADIM.OA\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.pdb
+E:\Home\海南\trunk\FS.ADIM.OA_v2\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.dll
+E:\Home\海南\trunk\FS.ADIM.OA_v2\FS.OA.DLL\FS\OA2DP\FounderSoftware.ADIM.OA.OA2DP.pdb
+E:\Home\海南\trunk\FS.ADIM.OA_v2\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\ResolveAssemblyReference.cache
+E:\Home\海南\trunk\FS.ADIM.OA_v2\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.dll
+E:\Home\海南\trunk\FS.ADIM.OA_v2\FounderSoftware.ADIM.OA.OA2DP\obj\Debug\FounderSoftware.ADIM.OA.OA2DP.pdb

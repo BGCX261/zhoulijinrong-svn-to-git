@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 配置流程对应的功能所能使用的组。使用";"分隔 -->
+<!-- isCheck:false表示组不可选，只能选择组里面的人；true表示可选 。支持大、小写。请不要修改-->
+<角色组>
+  <公司发文>
+    <抄送 isCheck="true"></抄送>
+    <主送 isCheck="true"></主送>
+    <继续传阅 isCheck="false"></继续传阅>
+  </公司发文>
+  <公司收文>
+    <承办人员 isCheck="false"></承办人员>
+    <分发范围 isCheck="false"></分发范围>
+    <继续传阅 isCheck="false"></继续传阅>
+  </公司收文>
+  <函件发文>
+    <核稿人 isCheck="false"></核稿人>
+    <继续传阅 isCheck="false"></继续传阅>
+  </函件发文>
+  <函件收文>
+    <传阅 isCheck="false"></传阅>
+    <继续传阅 isCheck="false"></继续传阅>
+  </函件收文>
+  <党纪工团发文>
+    <抄送 isCheck="true">公司办文书</抄送>
+    <主送 isCheck="true">公司领导</主送>
+    <继续传阅 isCheck="false"></继续传阅>
+  </党纪工团发文>
+  <党纪工团收文>
+    <分发范围 isCheck="false"></分发范围>
+    <继续传阅 isCheck="false"></继续传阅>
+  </党纪工团收文>
+  <工作联系单>
+    <核稿人 isCheck="false"></核稿人>
+    <抄送 isCheck="false"></抄送>
+    <承办传阅 isCheck="false"></承办传阅>
+    <继续传阅 isCheck="false"></继续传阅>
+  </工作联系单>
+  <请示报告>
+    <核稿人 isCheck="false"></核稿人>
+    <抄送 isCheck="false"></抄送>
+    <分发范围 isCheck="false"></分发范围>
+    <继续传阅 isCheck="false"></继续传阅>
+  </请示报告>
+  <程序文件>
+    <继续传阅 isCheck="false"></继续传阅>
+  </程序文件>
+</角色组>

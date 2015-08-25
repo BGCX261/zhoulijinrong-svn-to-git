@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--配置说明-->
+<!--<Process Name="公司发文">-->
+<!--<Object>DP</Object>-->
+    <!--CategID用于设置分类接收ID-->
+<!--<CategID></CategID>-->
+<!--若指定归档处室平台ID请配置DPID节点,如:(多个请用","分隔)-->
+<!--<DPID>1,P</DPID> ;配置归档处室ID-->
+<!--<OptionDPID>UndertabeDept,HostDept,DeptSIDs</OptionDPID> ;可选处室平台OA流程属性名称-->
+<!--<Private> ;Private节点可删除--> 
+<!--  <Node XPath="/Devolve/Archive/Ext_1"></Node>-->
+<!--  <Node XPath="/Devolve/Archive/Ext_2"></Node>-->
+<!--</Private>-->
+<!--</Process>-->
+<!--注意:XML中的节点属性,名称区分大小写,如节点的Name属性,N大写-->
+<Devolve>
+  <Process Name="党纪工团发文">
+    <Object>DP</Object>
+    <!--CategID用于设置分类接收ID-->
+    <CategID>100116</CategID>
+    <!--若指定归档处室平台ID请配置<DPID>节点,如:(多个请用','分隔)-->
+    <DPID>5</DPID>
+    <!--配置归档处室ID-->
+    <OptionDPID></OptionDPID>
+    <!--可选处室平台OA流程属性名称-->
+    <Private>
+      <Node XPath="/Devolve/Archive/Ext_1"></Node>
+      <Node XPath="/Devolve/Archive/Ext_2"></Node>
+    </Private>
+    <Map>
+      <DC NodeType="Archive">
+      </DC>
+      <DP NodeType="Archive">
+        <Node Name="Title">DocumentTitle</Node>  <!--<Node>节点值可用,分隔多个实体属性名称-->
+      </DP>
+    </Map>
+  </Process>
+
+  <Process Name="党纪工团收文">
+    <Object>DP</Object>
+    <!--CategID用于设置分类接收ID-->
+    <CategID>100117</CategID>
+    <!--若指定归档处室平台ID请配置<DPID>节点,如:(多个请用','分隔)-->
+    <DPID>5</DPID>
+    <!--配置归档处室ID-->
+    <OptionDPID></OptionDPID>
+    <!--可选处室平台OA流程属性名称-->
+    <Private>
+      <Node XPath="/Devolve/Archive/Ext_1"></Node>
+      <Node XPath="/Devolve/Archive/Ext_2"></Node>
+    </Private>
+    <Map>
+      <DC NodeType="Archive">
+      </DC>
+      <DP NodeType="Archive">
+        <Node Name="Title">DocumentTitle</Node>
+      </DP>
+    </Map>
+  </Process>
+  
+  <Process Name="公司发文">
+    <Object>DP</Object>
+    <!--CategID用于设置分类接收ID-->
+    <CategID>100113</CategID>
+    <!--若指定归档处室平台ID请配置<DPID>节点,如:(多个请用','分隔)-->
+    <DPID>5</DPID><!--配置归档处室ID-->
+    <OptionDPID></OptionDPID><!--可选处室平台OA流程属性名称-->
+    <Private>
+      <Node XPath="/Devolve/Archive/Ext_1"></Node>
+      <Node XPath="/Devolve/Archive/Ext_2"></Node>
+    </Private>
+    <Map>
+      <DC NodeType="Archive">
+      </DC>
+      <DP NodeType="Archive">
+        <Node Name="Code">DocumentNo</Node>
+        <Node Name="Authorizer">SignerName</Node>
+        <Node Name="DistributionTime">FenFaDate</Node>
+        <Node Name="Countersigner">DeptSigners</Node> 
+        <Node Name="Auditby">CheckDrafterName</Node>
+        <Node Name="AuditDate">CheckDate</Node>
+        <Node Name="FormationDept">HostDeptName</Node>
+        <Node Name="Author">Drafter</Node>
+        <Node Name="Title">DocumentTitle</Node>
+        <Node Name="ThemeWord">SubjectWord</Node>
+        <Node Name="MainDispenseUnit">MainSenders</Node>
+        <Node Name="RelatedDespenseUnit">CopySenders</Node>
+        <Node Name="EffectTime">ToShortDateString</Node>
+        <Node Name="DocPages" Type="INT">SheetCount</Node>
+      </DP>
+    </Map>
+  </Process>
+  
+  <Process Name="公司收文">
+    <Object>DP</Object>
+    <CategID>100114</CategID>
+    <DPID>5</DPID><!--配置归档处室ID-->
+    <OptionDPID></OptionDPID><!--可选处室平台OA流程属性名称-->
+    <Private>
+      <Node XPath="/Devolve/Archive/Ext_1"></Node>
+      <Node XPath="/Devolve/Archive/Ext_2"></Node>
+    </Private>
+    <Map>
+      <DC NodeType="Archive">
+      </DC>
+      <DP NodeType="Archive">
+        <Node Name="Title">DocumentTitle</Node>
+        <Node Name="ReceiveCode">DocumentNo</Node>
+        <Node Name="Code">SendNo</Node>
+        <Node Name="PaperDocumentTransceiverTime">DocumentReceiveDate</Node>
+        <Node Name="DocCode">VolumeNo</Node>
+        <Node Name="Proposer">OfficerName</Node>
+        <Node Name="Instructioner">LeaderShipName</Node>
+        <Node Name="FormationDept">ReceiveUnit</Node>
+        <Node Name="D_DocStorageLife">KeepTime</Node>
+        <Node Name="ThemeWord">SubjectWord</Node>
+        <Node Name="DocPages" Type="INT">iPage</Node>
+        <Node Name="ReceiveCode">ReceiveNo</Node>
+
+      </DP>
+    </Map>
+  </Process>
+  
+  <Process Name="请示报告">
+    <Object>DP</Object>
+    <CategID>100115</CategID>
+    <DPID>5</DPID>
+    <Private>
+      <Node XPath="/Devolve/Archive/GatherLevel">件</Node>  <!--聚合层次-->
+      <Node XPath="/Devolve/Archive/D_StorageCarrierType">纸质</Node> <!--载体类型-->
+      <Node XPath="/Devolve/Archive/Amount">1</Node>  <!--份数-->
+      <Node XPath="/Devolve/Archive/D_Language">中文</Node> <!--语种-->
+      <Node XPath="/Devolve/Archive/Importer"></Node> <!--登记人-->
+      <Node XPath="/Devolve/Archive/ImporterTime"></Node> <!--登记日期-->
+    </Private>
+    <Map>
+      <DC NodeType="Archive">
+      </DC>
+      <DP NodeType="Archive">
+        <Node Name="UndertakeDepartment">ChengBanBuMen</Node>
+        <Node Name="Title">DocumentTitle</Node>
+        <Node Name="MainDispenseUnit">MainSend</Node>
+        <Node Name="RelatedDespenseUnit">CopySend</Node>
+        <Node Name="FormationDept">Department</Node>
+        <Node Name="EffectTime">ToShortDateString</Node>
+        <Node Name="Auditby">CheckDrafter</Node>
+        <Node Name="AuditDate">ToShortDateString</Node>
+        <Node Name="Author">Drafter</Node>
+      </DP>
+    </Map>
+  </Process>
+  
+  
+  <Process Name="新版函件发文">
+    <Object>FC</Object>
+    <CategID>768</CategID>
+    <Private>
+      <Node XPath="/Devolve/Archive/Ext_1"></Node>
+      <Node XPath="/Devolve/Archive/Ext_2"></Node>
+    </Private>
+    <Map>
+      <DC NodeType="Archive">
+        <Node Name="DocPages" Type="INT">pages</Node>
+        <Node Name="CommunicationChannelCode">ourRef</Node>
+        <Node Name="AuthorizeTime">signDate</Node>
+        <Node Name="Authorizer">wfQianFaRenID</Node>
+        <Node Name="Countersigner">huiqianDates</Node>
+        <Node Name="CheckDate">heGaoRenDate</Node>
+        <Node Name="Checkthose">heGaoRen</Node>
+        <Node Name="Author">wfFaQiRenID</Node>
+        <Node Name="FormationTime"></Node>
+        <Node Name="FormationDept">sendDept1</Node>
+        <Node Name="Title">subject</Node>
+        <Node Name="MainDispenseUnit">companyID</Node>
+        <Node Name="RelatedDespenseUnit">ccCompany</Node>
+        <Node Name="Remark">syiJian</Node>
+      </DC>
+      <DP NodeType="Archive">
+        
+      </DP>
+    </Map>
+  </Process>
+  
+  <Process Name ="新版函件收文">
+    <Object>FC</Object>
+    <CategID>769</CategID>
+    <Map>
+      <DC NodeType="Archive">
+        <Node Name="FormationDept">CommunicationUnit</Node>
+        <Node Name="Title">DocumentTitle</Node>
+        <Node Name="ReceiveCode">DocumentNo</Node>
+        <Node Name="CommunicationChannelCode">FileEncoding</Node>
+        <Node Name="PaperDocumentTransceiverTime">ReceiptDate</Node>
+        <Node Name="AuthorizeTime">FormationDate</Node>
+        <Node Name="Pace">UrgentDegree</Node>
+        <Node Name="DocPages" Type="INT">Pages</Node>
+        <Node Name="Proposer">NiBanRenName</Node>
+        <Node Name="ProposeDate">NiBanDate</Node>
+        <Node Name="Instructioner">LeaderShipName</Node>
+        <Node Name="InstructionDate">LS_Date</Node>
+        <Node Name="UndertakeDepartment">UnderTakeID</Node>
+        <Node Name="ImporterTime">SubmitDate</Node>        
+        <Node Name="Authorizer">qianFaRen</Node>
+        <Node Name="MainDispenseUnit">company</Node>
+      </DC>
+      <DP NodeType="Archive">
+      </DP>
+    </Map>
+  </Process>
+  
+  <Process Name ="大纲级管理程序">
+    <Object>FC</Object>
+    <CategID>757</CategID>
+    <Map>
+      <DC NodeType="Archive">
+        <Node Name="Code">ProgramCode</Node>
+        <Node Name="FormationDept"></Node>
+        <Node Name="Title">DocumentTitle</Node>
+        <Node Name="FunctionField"></Node>
+        <Node Name="Revision">Edition</Node>
+        <Node Name="DocPages">TextPageSum</Node>
+        <Node Name="Authorizer">ApproveName</Node>
+        <Node Name="AuthorizeTime">ApproveDate</Node>
+        <Node Name="Auditby">AuditName</Node>
+        <Node Name="AuditDate">AuditDate</Node>
+        <Node Name="Checkthose">CheckName</Node>
+        <Node Name="CheckDate">CheckDate</Node>
+        <Node Name="Author">WriteName</Node>
+        <Node Name="FormationTime">WriteDate</Node>
+      </DC>
+      <DP NodeType="Archive">
+       
+      </DP>
+    </Map>
+  </Process>
+  <Process Name ="公司级管理程序">
+    <Object>FC</Object>
+    <CategID>758</CategID>
+    <Map>
+      <DC NodeType="Archive">
+        <Node Name="Code">ProgramCode</Node>
+        <Node Name="FormationDept"></Node>
+        <Node Name="Title">DocumentTitle</Node>
+        <Node Name="FunctionField"></Node>
+        <Node Name="Revision">Edition</Node>
+        <Node Name="DocPages" Type="INT">TextPageSum</Node>
+        <Node Name="Authorizer">ApproveName</Node>
+        <Node Name="AuthorizeTime">ApproveDate</Node>
+        <Node Name="Auditby">AuditName</Node>
+        <Node Name="AuditDate">AuditDate</Node>
+        <Node Name="Checkthose">CheckName</Node>
+        <Node Name="CheckDate">CheckDate</Node>
+        <Node Name="Author">WriteName</Node>
+        <Node Name="FormationTime">WriteDate</Node>
+      </DC>
+      <DP NodeType="Archive">
+      </DP>
+    </Map>
+  </Process>
+  <Process Name ="部门管理程序">
+    <Object>FC</Object>
+    <CategID>759</CategID>
+    <Map>
+      <DC NodeType="Archive">
+        <Node Name="Code">ProgramCode</Node>
+        <Node Name="FormationDept"></Node>
+        <Node Name="Title">DocumentTitle</Node>
+        <Node Name="FunctionField"></Node>
+        <Node Name="Revision">Edition</Node>
+        <Node Name="DocPages">TextPageSum</Node>
+        <Node Name="Authorizer">ApproveName</Node>
+        <Node Name="AuthorizeTime">ApproveDate</Node>
+        <Node Name="Auditby">AuditName</Node>
+        <Node Name="AuditDate">AuditDate</Node>
+        <Node Name="Checkthose">CheckName</Node>
+        <Node Name="CheckDate">CheckDate</Node>
+        <Node Name="Author">WriteName</Node>
+        <Node Name="FormationTime">WriteDate</Node>
+      </DC>
+      <DP NodeType="Archive">
+        
+      </DP>
+    </Map>
+  </Process>
+  <Process Name ="工作程序">
+    <Object>FC</Object>
+    <CategID>761</CategID>
+    <Map>
+      <DC NodeType="Archive">
+        <Node Name="Code">ProgramCode</Node>
+        <Node Name="FormationDept"></Node>
+        <Node Name="Title">DocumentTitle</Node>
+        <Node Name="FunctionField"></Node>
+        <Node Name="Revision">Edition</Node>
+        <Node Name="DocPages">TextPageSum</Node>
+        <Node Name="Authorizer">ApproveName</Node>
+        <Node Name="AuthorizeTime">ApproveDate</Node>
+        <Node Name="Auditby">AuditName</Node>
+        <Node Name="AuditDate">AuditDate</Node>
+        <Node Name="Checkthose">CheckName</Node>
+        <Node Name="CheckDate">CheckDate</Node>
+        <Node Name="Author">WriteName</Node>
+        <Node Name="FormationTime">WriteDate</Node>
+      </DC>
+      <DP NodeType="Archive">
+        
+      </DP>
+    </Map>
+  </Process>
+  <Public>
+      <Node XPath="/Devolve/Archive/Is_Piece">件</Node>
+      <Node XPath="/Devolve/Archive/D_StorageCarrierType">纸质</Node>
+      <Node XPath="/Devolve/Archive/Amount" >1</Node>
+      <Node XPath="/Devolve/Archive/D_Language">中文</Node>
+      <Node XPath="/Devolve/Archive/OriginalInfomationSystem">OA</Node> <!--请勿修改该处设置-->
+  </Public>
+  <Other>
+    <ServerWeb>http://10.20.2.21/OA/</ServerWeb>
+  </Other>
+</Devolve>

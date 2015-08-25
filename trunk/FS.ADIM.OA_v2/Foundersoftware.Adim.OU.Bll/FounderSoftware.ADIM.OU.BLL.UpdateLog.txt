@@ -1,0 +1,160 @@
+﻿更新列表：
+
+版本： 1.1.5
+日期： 2010－2－10
+
+1.添加根据用户ID,获得用户方法,参数为字符串
+        /// <summary>
+        /// 根据用户ID获得用户
+        /// </summary>
+        /// <param name="strID">用户ID</param>
+        /// <returns></returns>
+        public static User GetUserByID(string strID)
+-------------------------------------------------------------------------------------------------------------------------------------
+
+版本： 1.1.4
+日期： 2010－1－28
+
+1.根据职位获得拥有该职位的用户
+        /// <summary>
+        /// 根据职位找人，支持多个职位
+        /// </summary>
+        /// <param name="sPostNames">职位名字 ","连接</param>
+        /// <returns></returns>
+        public static ViewBase GetUserByPosition(string sPostNames)
+
+2.根据角色名称获得拥有该角色的用户
+        /// <summary>
+        /// 根据角色找人，支持多个角色
+        /// </summary>
+        /// <param name="sRoles">角色名字 ","连接</param>
+        /// <returns></returns>
+        public static ViewBase GetUserByRoles(string sRoles)
+
+3.根据职位名称获得大于该职位的所有用户
+        /// <summary>
+        /// 根据职位名称获得当前部门大于该职位的人
+        /// </summary>
+        /// <param name="sPostName">职位名称</param>
+        /// <returns></returns>
+        public ViewBase GetUserByPosition(string sPostName)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+版本： 1.1.3
+日期： 2010－1－10
+
+1.根据部门ID获得当前角色下的所有人
+        /// <summary>
+        /// 根据部门获得当前角色下的人
+        /// </summary>
+        /// <param name="iDeptID">部门ID</param>
+        /// <returns></returns>
+        public ViewBase GetUserByCurrDept(int iDeptID)
+
+2.根据部门ID和角色获得用户
+        /// <summary>
+        /// 根据部门ID和角色获得用户
+        /// </summary>
+        /// <param name="iDeptID">部门ID</param>
+        /// <param name="strWhere">查询条件</param>
+        /// <returns></returns>
+        public  static ViewBase GetUserByDeptAndRoles(int iDeptID,string strWhere)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+版本： 1.1.2
+日期： 2009－12－20
+
+1.获得部门领导和部门负责人，考虑既是领导也是负责人(LeaderType=3)的情况
+        /// <summary>
+        /// 获取部门及子部门领导或负责人
+        /// </summary>
+        /// <param name="iFloorCode">0自己,>0 子部门层数 -1所有</param>
+        /// <param name="type">领导或负责人</param>
+        /// <returns></returns>
+        private ViewBase GetManagerOrLeader(int iFloorCode, Common.LeaderType type)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+版本： 1.1.1
+日期： 2009－11－16
+
+1.修改登陆验证接口，例如：
+        /// <summary>
+        /// 登陆验证,返回验证结果
+        /// 登陆成功：返回LoginResult.Succeed的枚举,同时返回对应的User
+        /// 登陆失败:返回 LoginResult.UserIDError或LoginResult.PwdError的枚举,并且返回User为null
+        /// </summary>
+        /// <param name="strID">帐号</param>
+        /// <param name="strPWD">密码</param>
+        /// <param name="user">用户对象(帐号或密码错误，返回null)</param>
+        /// <returns></returns>
+        public static LoginResult Login(string strID, string strPWD, out User user)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+        
+版本： 1.0.3
+日期： 2009－11－13
+
+1.	在FounderSoftware.ADIM.OU.BLL.Busi.Company里添加
+	根据单位名称,单位编号,联系获得单位，例如：
+        /// <summary>
+        /// 根据单位名称,单位编号,联系获得单位
+        /// 1：根据单位名称
+        /// 2：根据单位编号
+        /// 3：根据单位联系人
+        /// </summary>
+        /// <param name="strName">单位名称或者编号或者联系人</param>
+        /// <param name="iSearchType">查询类别(根据单位名称,编号,联系人查询 1:单位名称;2:单位编号;3:单位联系人)</param>
+        /// <returns></returns>
+        public static ViewBase GetCompany(string strName,int iSearchType)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+版本： 1.0.2
+日期： 2009－11－11
+
+1.开放通过Role获得角色对象接口，例如：
+        /// <summary>
+        /// 通过角色名获得角色
+        /// </summary>
+        /// <param name="strRoleName"></param>
+        /// <returns></returns>
+        public static Role GetRole(string strName)
+        
+2.根据角色名获得角色的人 例如：
+		/// <summary>
+        /// 获取当前角色下的人
+        /// </summary>
+        public ViewBase Users      
+
+3.根据部门名称获得这个角色的人接口 ，例如：   
+	/// <summary>
+        /// 根据部门获得这个角色的的所有人
+        /// </summary>
+        /// <param name="strDept">部门名称</param>
+        /// <returns></returns>
+        public ViewBase GetUserByDept(string strDept)
+
+------------------------------------------------------------------------------------------------------------------------------------- 
+
+版本： 1.0.1
+日期： 2009－11－11
+
+1.开放通过用户User获得用户接口，例如：
+        /// <summary>
+        /// 通过用户User获得用户
+        /// </summary>
+        /// <param name="strUserID"></param>
+        /// <returns>User</returns>
+        public static User GetUser(string strUserID)
+          
+-------------------------------------------------------------------------------------------------------------------------------------  
+        
+
+        
+        
+
+
+

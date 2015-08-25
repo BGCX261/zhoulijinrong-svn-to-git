@@ -1,0 +1,57 @@
+// EditorOnline.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+// 产生类型库(EditorOnline.tlb)，该类型库将成为
+// EditorOnline.ocx 中的资源。
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(5B07517A-352B-436B-ACE1-2B537853373A), version(1.0),
+  helpfile("EditorOnline.hlp"),
+  helpstring("EditorOnline ActiveX 控件模块"),
+  control ]
+library EditorOnlineLib
+{
+	importlib(STDOLE_TLB);
+
+	//  CEditorOnlineCtrl 的主调度接口
+
+	[ uuid(38B04295-9189-4AF9-A87A-274E5FC79880),
+	  helpstring("EditorOnline Control 的调度接口")]
+	dispinterface _DEditorOnline
+	{
+		properties:
+		methods:
+            [id(1), helpstring("方法ShowAxWnd")] ULONG ShowAxWnd(void);
+            [id(2), helpstring("方法SetDocLibLst")] BSTR SetDocLibLst(BSTR sDocLst);
+            [id(3), helpstring("方法GetDocLibLst")] BSTR GetDocLibLst(void);
+            [id(4), helpstring("方法SetConfigInfo")] BSTR SetConfigInfo(BSTR CfgInfo);
+            [id(5), helpstring("方法GetConfigInfo")] BSTR GetConfigInfo(void);
+            [id(6), helpstring("方法SetEnableEditCol")] void SetEnableEditCol(ULONG iItem, VARIANT_BOOL Enable);
+            [id(7), helpstring("方法AutoShowAxWnd")] void AutoShowAxWnd(BSTR sKey);
+    };
+
+	//  CEditorOnlineCtrl 的事件调度接口
+
+	[ uuid(BBDAA0F9-8277-4D3B-B53D-673D82F87042),
+	  helpstring("EditorOnline Control 的事件接口") ]
+	dispinterface _DEditorOnlineEvents
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  CEditorOnlineCtrl 的类信息
+
+	[ uuid(B810BF98-8736-4824-B674-521A7E7369B1),
+	  helpstring("EditorOnline Control"), control ]
+	coclass EditorOnline
+	{
+		[default] dispinterface _DEditorOnline;
+		[default, source] dispinterface _DEditorOnlineEvents;
+	};
+
+};

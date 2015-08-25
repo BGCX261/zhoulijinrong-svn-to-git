@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <process name="公司发文">
+    <template id="1">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+    <template id="">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+    <template id="拟稿">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+    <template id="审稿">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+    <template id="部门会签">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+    <template id="核稿">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+    <template id="主任核稿">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+    <template id="领导会签">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+    <template id="签发">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+    <template id="校对">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+    <template id="分发">
+      <tf>LAST</tf>
+    </template>
+    <template id="传阅">
+      <tf>文件处理单\公司发文表单.docx</tf>
+    </template>
+  </process>
+
+  <process name="公司收文">
+    <template id="1">
+      <tf>LAST</tf>
+    </template>
+    <template id="">
+      <tf>LAST</tf>
+    </template>
+    <template id="发起流程">
+      <tf>LAST</tf>
+    </template>
+    <template id="办公室批阅">
+      <tf>LAST</tf>
+    </template>
+    <template id="领导批示">
+      <tf>LAST</tf>
+    </template>
+    <template id="收文处理中心">
+      <tf>LAST</tf>
+    </template>
+    <template id="收文处理中心归档">
+      <tf>LAST</tf>
+    </template>
+    <template id="处室承办">
+      <tf>LAST</tf>
+    </template>
+    <template id="科室承办">
+      <tf>LAST</tf>
+    </template>
+    <template id="人员承办">
+      <tf>LAST</tf>
+    </template>
+    <template id="传阅">
+      <tf>LAST</tf>
+    </template>
+  </process>
+
+  <process name="函件发文">
+    <template id="1">
+      <tf>文件处理单\函件发文表单.docx</tf>
+    </template>
+    <template id="">
+      <tf>文件处理单\函件发文表单.docx</tf>
+    </template>
+    <template id="发起函件">
+      <tf>文件处理单\函件发文表单.docx</tf>
+    </template>
+    <template id="核稿">
+      <tf>文件处理单\函件发文表单.docx</tf>
+    </template>
+    <template id="会签">
+      <tf>文件处理单\函件发文表单.docx</tf>
+    </template>
+    <template id="签发">
+      <tf>文件处理单\函件发文表单.docx</tf>
+    </template>
+    <template id="函件分发">
+      <tf>文件处理单\函件发文表单.docx</tf>
+    </template>
+    <template id="传阅">
+      <tf>文件处理单\函件发文表单.docx</tf>
+    </template>
+    <template id="二次分发">
+      <tf>文件处理单\函件发文表单.docx</tf>
+    </template>
+  </process>
+
+  <process name="函件收文">
+    <template id="1">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="发起流程">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="拟办">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="领导批示">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="二次拟办">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="处室承办">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="科室承办">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="人员承办">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="协办">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="传阅">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="传阅(待阅)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="函件管理员处理">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+
+    <template id="发起流程(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="拟办(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="领导批示(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="二次拟办(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="处室承办(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="科室承办(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="人员承办(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="协办(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="传阅(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="函件管理员处理(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+    <template id="发起流程(二次分发)(已办)">
+      <tf>文件处理单\函件收文表单.docx</tf>
+    </template>
+  </process>
+
+  <process name="请示报告">
+    <template id="1">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="拟稿">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="核稿">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="签发">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="秘书审核">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="主任审核">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="领导批示">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="秘书分发">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="处室承办">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="科室承办">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="人员承办">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+    <template id="承办审核">
+      <tf>LAST</tf>
+    </template>
+    <template id="传阅">
+      <tf>文件处理单\请示报告表单.docx</tf>
+    </template>
+  </process>
+
+  <process name="程序文件">
+    <template id="1">
+      <tf>文件处理单\程序文件表单.docx</tf>
+      <tf>文件处理单\程序审查意见落实表.docx</tf>
+      <tf>文件处理单\管理程序封面模板.docx</tf>
+    </template>
+    <template id="">
+      <tf>文件处理单\程序文件表单.docx</tf>
+      <tf>文件处理单\程序审查意见落实表.docx</tf>
+      <tf>文件处理单\管理程序封面模板.docx</tf>
+    </template>
+    <template id="编制">
+      <tf>文件处理单\程序文件表单.docx</tf>
+      <tf>文件处理单\程序审查意见落实表.docx</tf>
+      <tf>文件处理单\管理程序封面模板.docx</tf>
+    </template>
+    <template id="校核">
+      <tf>文件处理单\程序文件表单.docx</tf>
+      <tf>文件处理单\程序审查意见落实表.docx</tf>
+      <tf>文件处理单\管理程序封面模板.docx</tf>
+    </template>
+    <template id="审核">
+      <tf>文件处理单\程序文件表单.docx</tf>
+      <tf>文件处理单\程序审查意见落实表.docx</tf>
+      <tf>文件处理单\管理程序封面模板.docx</tf>
+    </template>
+    <template id="质保审查">
+      <tf>文件处理单\程序文件表单.docx</tf>
+      <tf>文件处理单\程序审查意见落实表.docx</tf>
+      <tf>文件处理单\管理程序封面模板.docx</tf>
+    </template>
+    <template id="部门会签">
+      <tf>文件处理单\程序文件表单.docx</tf>
+      <tf>文件处理单\程序审查意见落实表.docx</tf>
+      <tf>文件处理单\管理程序封面模板.docx</tf>
+    </template>
+    <template id="领导会签">
+      <tf>文件处理单\程序文件表单.docx</tf>
+      <tf>文件处理单\程序审查意见落实表.docx</tf>
+      <tf>文件处理单\管理程序变更申请表.docx</tf>
+      <tf>文件处理单\管理程序封面模板.docx</tf>
+    </template>
+    <template id="批准">
+      <tf>文件处理单\程序文件表单.docx</tf>
+      <tf>文件处理单\程序审查意见落实表.docx</tf>
+      <tf>文件处理单\管理程序封面模板.docx</tf>
+    </template>
+    <template id="分发">
+      <tf>LAST</tf>
+    </template>
+    <template id="传阅">
+      <tf>文件处理单\程序文件表单.docx</tf>
+      <tf>文件处理单\程序审查意见落实表.docx</tf>
+      <tf>文件处理单\管理程序封面模板.docx</tf>
+    </template>
+  </process>
+
+  <process name="工作联系单">
+    <template id="1">
+      <tf>文件处理单\工作联系单表单.docx</tf>
+    </template>
+    <template id="">
+      <tf>文件处理单\工作联系单表单.docx</tf>
+    </template>
+    <template id="拟稿">
+      <tf>文件处理单\工作联系单表单.docx</tf>
+    </template>
+    <template id="核稿">
+      <tf>文件处理单\工作联系单表单.docx</tf>
+    </template>
+    <template id="签发">
+      <tf>文件处理单\工作联系单表单.docx</tf>
+    </template>
+    <template id="传阅">
+      <tf>文件处理单\工作联系单表单.docx</tf>
+    </template>
+    <template id="处室承办">
+      <tf>LAST</tf>
+    </template>
+    <template id="科室承办">
+      <tf>文件处理单\工作联系单表单.docx</tf>
+    </template>
+    <template id="人员承办">
+      <tf>文件处理单\工作联系单表单.docx</tf>
+    </template>
+    <template id="部门会签">
+      <tf>文件处理单\工作联系单表单.docx</tf>
+    </template>
+  </process>
+  <process name="党纪工团收文">
+    <template id="1">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+    <template id="发起流程">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+    <template id="拟办">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+    <template id="收文处理中心">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+    <template id="领导批示">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+    <template id="收文处理中心归档">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+    <template id="传阅">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+    <template id="处室承办">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+    <template id="科室承办">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+    <template id="人员承办">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+    <template id="追加分发">
+      <tf>文件处理单\党纪工团收文表单.docx</tf>
+    </template>
+  </process>
+
+  <process name="党纪工团发文">
+    <template id="1">
+      <tf>文件处理单\党纪工团发文表单.docx</tf>
+    </template>
+    <template id="拟稿">
+      <tf>文件处理单\党纪工团发文表单.docx</tf>
+    </template>
+    <template id="审稿">
+      <tf>文件处理单\党纪工团发文表单.docx</tf>
+    </template>
+    <template id="部门会签">
+      <tf>文件处理单\党纪工团发文表单.docx</tf>
+    </template>
+    <template id="核稿">
+      <tf>文件处理单\党纪工团发文表单.docx</tf>
+    </template>
+    <template id="领导会签">
+      <tf>文件处理单\党纪工团发文表单.docx</tf>
+    </template>
+    <template id="签发">
+      <tf>文件处理单\党纪工团发文表单.docx</tf>
+    </template>
+    <template id="分发">
+      <tf>LAST</tf>
+    </template>
+    <template id="校对">
+      <tf>文件处理单\党纪工团发文表单.docx</tf>
+    </template>
+  </process>
+</config>

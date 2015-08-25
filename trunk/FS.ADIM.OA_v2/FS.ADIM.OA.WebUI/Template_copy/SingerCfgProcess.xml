@@ -1,0 +1,20 @@
+<Signer Ratio="375:154"> 
+  <!--Ratio表示签名图片长宽比例,若为空,或无效数值则使用<Singer>节点中配置的长宽值 注:Ratio区分大小写,所有节点名称以及节点属性区分大小写-->
+  <!--<Singer>节点新增Display属性，表示是否对所配置节点处生成的签名图片增加时间戳，若Display="none"值，则表示只输出签名图片，不添加时间戳；
+  否则Display属性赋值为其他值或未添加该属性时，则表示若取不到相应日期时间的情况下，将取当前日期时间作为时间戳-->
+  <Process Name="程序文件">
+    <Template Name="程序审查意见落实表">
+      <Singer Left="-10" Top="0" Width="100" Height="30" Step="领导会签:较早">公司领导|down</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="20" Step="审核:较晚">审核|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="20" Step="校核:较晚">校核|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="20" Step="编制:较晚">编制|right</Singer>
+    </Template>
+    <Template Name="管理程序封面模板">
+      <Singer Left="-10" Top="0" Width="134" Height="55" Step="批准:较早" Display="none">批准实施:|right</Singer>
+      <Singer Left="5" Top="-1" Width="98" Height="40" Step="编制:较晚" Display="none">编制|right</Singer>
+      <Singer Left="5" Top="-1" Width="98" Height="40" Step="校核:较晚" Display="none">校核|right</Singer>
+      <Singer Left="5" Top="-1" Width="98" Height="40" Step="审核:较晚" Display="none">审核|right</Singer>
+      <Singer Left="5" Top="-1" Width="98" Height="40" Step="质保审查:较早" Display="none">质保审查|right</Singer>
+    </Template>
+  </Process>
+</Signer>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FS.ADIM.OA">
+</Property><Property Name="解决方案文件" Value="E:\FS.ADIM.OA\FS.ADIM.OA\FS.ADIM.OA.sln">
+</Property><Property Name="Date" Value="2013年4月19日">
+</Property><Property Name="Time" Value="13:18">
+</Property></Properties><Event ErrorLevel="0" Project="FS.ADIM.OA.WebUI" Source="FS.ADIM.OA.WebUI\FS.ADIM.OA.WebUI.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="FS.ADIM.OA.WebUI" Source="FS.ADIM.OA.WebUI\FS.ADIM.OA.WebUI.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FS.OA.Framework" Source="FS.OA.Framework\FS.OA.Framework.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="FS.OA.Framework" Source="FS.OA.Framework\FS.OA.Framework.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FS.ADIM.OA.BLL" Source="FS.ADIM.OA.BLL\FS.ADIM.OA.BLL.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="FS.ADIM.OA.BLL" Source="FS.ADIM.OA.BLL\FS.ADIM.OA.BLL.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FS.ADIM.OU.OutBLL" Source="FS.ADIM.OU.OutBLL\FS.ADIM.OU.OutBLL.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="FS.ADIM.OU.OutBLL" Source="FS.ADIM.OU.OutBLL\FS.ADIM.OU.OutBLL.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FS.ADIM.OA.MOSSS" Source="FS.ADIM.OA.MOSSS\FS.ADIM.OA.MOSSS.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="FS.ADIM.OA.MOSSS" Source="FS.ADIM.OA.MOSSS\FS.ADIM.OA.MOSSS.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FounderSoftware.ADIM.OA.OA2DC" Source="FounderSoftware.ADIM.OA.OA2DC\FounderSoftware.ADIM.OA.OA2DC.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="FounderSoftware.ADIM.OA.OA2DC" Source="FounderSoftware.ADIM.OA.OA2DC\FounderSoftware.ADIM.OA.OA2DC.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FounderSoftware.ADIM.OA.OA2DP" Source="FounderSoftware.ADIM.OA.OA2DP\FounderSoftware.ADIM.OA.OA2DP.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="FounderSoftware.ADIM.OA.OA2DP" Source="FounderSoftware.ADIM.OA.OA2DP\FounderSoftware.ADIM.OA.OA2DP.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="FS.ADIM.OA.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="FS.ADIM.OA.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FS.ADIM.OA.WebUI" Source="FS.ADIM.OA.WebUI\FS.ADIM.OA.WebUI.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="FS.OA.Framework" Source="FS.OA.Framework\FS.OA.Framework.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="FS.ADIM.OA.BLL" Source="FS.ADIM.OA.BLL\FS.ADIM.OA.BLL.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="FS.ADIM.OU.OutBLL" Source="FS.ADIM.OU.OutBLL\FS.ADIM.OU.OutBLL.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="FS.ADIM.OA.MOSSS" Source="FS.ADIM.OA.MOSSS\FS.ADIM.OA.MOSSS.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="FounderSoftware.ADIM.OA.OA2DC" Source="FounderSoftware.ADIM.OA.OA2DC\FounderSoftware.ADIM.OA.OA2DC.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="FounderSoftware.ADIM.OA.OA2DP" Source="FounderSoftware.ADIM.OA.OA2DP\FounderSoftware.ADIM.OA.OA2DP.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

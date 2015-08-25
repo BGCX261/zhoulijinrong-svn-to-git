@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--配置说明-->
+
+<!--<StepName>表示可以执行分发的节点-->
+<!--<StepName>如果是多个节点使用";"分隔-->
+
+<!--<Role>表示可以执行分发的角色-->
+<!--<StepName>如果是多个角色使用";"分隔-->
+
+<DevolveRole>
+  <公司发文>
+    <StepName>分发</StepName>
+    <Role>公司办文书</Role>
+  </公司发文>
+  <公司收文>
+    <StepName>收文处理中心归档</StepName>
+    <Role>公司办文书</Role>
+  </公司收文>
+  <新版函件发文>
+    <StepName>二次分发</StepName>
+    <Role>函件管理员</Role>
+  </新版函件发文>
+  <新版函件收文>
+    <StepName>函件管理员处理</StepName>
+    <Role>函件管理员</Role>
+  </新版函件收文>
+  <党纪工团发文>
+    <StepName>分发</StepName>
+    <Role>党群文书组</Role>
+  </党纪工团发文>
+  <党纪工团收文>
+    <StepName>收文处理中心归档</StepName>
+    <Role>党群文书组</Role>
+  </党纪工团收文>
+  <程序文件>
+    <StepName>分发</StepName>
+    <Role>程序管理员</Role>
+  </程序文件>
+  <请示报告>
+    <StepName>承办审核</StepName>
+    <Role>公司办秘书</Role>
+  </请示报告>
+</DevolveRole>

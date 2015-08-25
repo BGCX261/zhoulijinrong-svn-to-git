@@ -1,0 +1,16 @@
+E:\核电\091112\FounderSoftware.ADIM.HN\FounderSoftware.ADIM.OA\FS.ADIM.OA.MOSSS\bin\Debug\FS.ADIM.OA.MOSSS.dll
+E:\核电\091112\FounderSoftware.ADIM.HN\FounderSoftware.ADIM.OA\FS.ADIM.OA.MOSSS\bin\Debug\FS.ADIM.OA.MOSSS.pdb
+E:\核电\091112\FounderSoftware.ADIM.HN\FounderSoftware.ADIM.OA\FS.ADIM.OA.MOSSS\bin\Debug\Microsoft.SharePoint.dll
+E:\核电\091112\FounderSoftware.ADIM.HN\FounderSoftware.ADIM.OA\FS.ADIM.OA.MOSSS\obj\Debug\ResolveAssemblyReference.cache
+E:\核电\091112\FounderSoftware.ADIM.HN\FounderSoftware.ADIM.OA\FS.ADIM.OA.MOSSS\obj\Debug\FS.ADIM.OA.MOSSS.dll
+E:\核电\091112\FounderSoftware.ADIM.HN\FounderSoftware.ADIM.OA\FS.ADIM.OA.MOSSS\obj\Debug\FS.ADIM.OA.MOSSS.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹 (2)\FS.ADIM.OA.MOSSS\bin\Debug\FS.ADIM.OA.MOSSS.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹 (2)\FS.ADIM.OA.MOSSS\bin\Debug\FS.ADIM.OA.MOSSS.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹 (2)\FS.ADIM.OA.MOSSS\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\新建文件夹 (2)\FS.ADIM.OA.MOSSS\obj\Debug\FS.ADIM.OA.MOSSS.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹 (2)\FS.ADIM.OA.MOSSS\obj\Debug\FS.ADIM.OA.MOSSS.pdb
+D:\HNPC\FS.ADIM.OA\OA_MOSS Service 源码\FS.ADIM.OA.MOSSS\bin\Debug\FS.ADIM.OA.MOSSS.dll
+D:\HNPC\FS.ADIM.OA\OA_MOSS Service 源码\FS.ADIM.OA.MOSSS\bin\Debug\FS.ADIM.OA.MOSSS.pdb
+D:\HNPC\FS.ADIM.OA\OA_MOSS Service 源码\FS.ADIM.OA.MOSSS\obj\Debug\ResolveAssemblyReference.cache
+D:\HNPC\FS.ADIM.OA\OA_MOSS Service 源码\FS.ADIM.OA.MOSSS\obj\Debug\FS.ADIM.OA.MOSSS.dll
+D:\HNPC\FS.ADIM.OA\OA_MOSS Service 源码\FS.ADIM.OA.MOSSS\obj\Debug\FS.ADIM.OA.MOSSS.pdb

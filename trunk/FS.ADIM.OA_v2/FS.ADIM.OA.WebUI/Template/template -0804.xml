@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+<!--公司发文流程 START-->
+  <template name='公司发文表单.docx'>
+    <col>紧急程度:|right</col>
+    <col>发文号:|right</col>
+    <col>签发:|right</col>
+    <col>会签人:|right</col>
+    <col>会签人: |right</col>
+    <col>日期:|right</col>
+    <col>秘书:|right</col>
+    <col>日期: |right</col>
+    <col>主任:|right</col>
+    <col>日期:  |right</col>
+    <col>审稿人:|right</col>
+    <col>审稿日期:|right</col>
+    <col>主办部门:|right</col>
+    <col>拟稿日期:|right</col>
+    <col>拟稿人:|right</col>
+    <col>电话:|inner</col>
+    <col>标题:|right</col>
+    <col>主题词:|inner</col>
+    <col>主送:|right</col>
+    <col>抄送:|inner</col>
+    <col>发文日期:|right</col>
+    <col>共印|right</col>
+    <col>份,每份|right</col>
+    <col>打字:|inner</col>
+    <col>校对:|inner</col>
+    <col>复核:|right</col>
+    <col>已会签人:|right</col>
+    <col>意见:|right</col>
+    <col>已会签人: |right</col>
+    <col>意见: |right</col>
+    <col>分发范围:|right</col>
+    <col>附件:|down</col>
+  </template>
+  <template name="工程会议纪要.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>  分送：（仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>  打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+  <template name="公文报告模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>  抄送：（仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+  <template name="公文函模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>  抄送：（仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+  <template name="公文请示模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>  抄送：（仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+  <template name='公文首页纸.docx'>
+      <col>密别：|inner</col>
+      <col>海核|shift</col>
+      <col>编号|shift</col>
+      <col>号|shift</col>
+      <col>紧急程度：|right</col>
+      <col>签发|shift</col>
+      <col>会签|shift</col>
+      <col>核稿：|down</col>
+      <col>审稿|right</col>
+      <col>拟稿人及电话|right</col>
+      <col>主送：|right</col>
+      <col>抄送：|right</col>
+      <col>主题词：|right</col>
+      <col>标题：|right</col>
+      <col>打字：|right</col>
+      <col>校对：|right</col>
+      <col>共印：|right</col>
+    </template>
+  <template name="公文通知模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>  抄送：（仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+  <template name='会议纪要模版.docx'>
+      <col>海核纪要[2009]号|shift</col>
+      <col>[标题]|shift</col>
+      <col>[主送单位]|shift</col>
+      <col>[正文仿宋三号,不加粗]|shift</col>
+      <col>[二〇〇九年某月某日]|shift</col>
+      <col>主题词：***  **  纪要（三号黑体，中间空2字符）|shift</col>
+      <col>抄送：（仿宋三号，不加粗）|shift</col>
+      <col>2009年  月  日印发|shift</col>
+      <col>打字：|right</col>
+      <col>校对：|right</col>
+    </template>
+  <template name="简报模版.docx">
+       <col>[主送单位]|shift</col>
+       <col>［正文仿宋三号，不加粗］|shift</col>
+    </template>
+  <template name="简讯模版.docx">
+       <col>[标题]|shift</col>
+       <col>[主送单位]|shift</col>
+       <col>[正文仿宋三号,不加粗]|shift</col>
+    </template>
+<!--公司发文流程 END-->
+
+<!--工作联系流程 START-->
+  <template name='工作联系单.docx'>
+    <col>主送:|inner</col>
+    <col>编码:|inner</col>
+    <col>抄送:|inner</col>
+    <col>编制处室:|inner</col>
+    <col>编写:|right</col>
+    <col>校核:|right</col>
+    <col>审定:|right</col>
+    <col>日期:|inner</col>
+    <col>主题:|inner</col>
+    <col>正文|shift</col>
+    <col>承办意见:|right</col>
+    <col>承办结果:|right</col>
+  </template>
+  <template name='工作联系单表单.docx'>
+    <col>拟稿日期:|right</col>
+    <col>主送:|right</col>
+    <col>编号:|right</col>
+    <col>编制部门:|right</col>
+    <col>抄送:|right</col>
+    <col>主题:|right</col>
+    <col>内容:|right</col>
+    <col>答复或处理意见:|right</col>
+    <col>办理意见:|right</col>
+    <col>承办部门领导:|right</col>
+    <col>科室领导:|right</col>
+    <col>承办人:|right</col>
+    <col>承办日期:|right</col>
+    <col>签发人:|right</col>
+    <col>核稿人:|right</col>
+    <col>拟稿人:|right</col>
+    <col>签发日期:|right</col>
+    <col>传阅人员:|right</col>
+  </template>
+<!--工作联系流程 END-->
+
+<!--请示报告流程 START-->
+  <template name='请示报告表单.docx'>
+    <col>海南核电有限公司请示|shift</col>
+    <col>拟稿日期:|right</col>
+    <col>主送:|right</col>
+    <col>编号:|right</col>
+    <col>编制部门:|right</col>
+    <col>抄送:|right</col>
+    <col>主题:|right</col>
+    <col>内容:|right</col>
+    <col>领导批示:|right</col>
+    <col>承办情况:|right</col>
+    <col>部门负责人:|right</col>
+    <col>核稿人:|right</col>
+    <col>拟稿人:|right</col>
+    <col>签发日期:|right</col>
+    <col>部门:|inner</col>
+    <col>公司领导:|inner</col>
+    <col>附件:|down</col>
+  </template>
+  <template name='公司报告.docx'>
+    <col>主送：|right</col>
+    <col>编码：|right</col>
+    <col>抄送：|right</col>
+    <col>编制处室：|right</col>
+    <col>编写：|right</col>
+    <col>审定：|right</col>
+    <col>日期：|right</col>
+    <col>主题：|right</col>
+    <col>正文|shift</col>
+    <col>领导批示:|right</col>
+  </template>
+  <template name='公司请示.docx'>
+    <col>主送：|right</col>
+    <col>编码：|right</col>
+    <col>抄送：|right</col>
+    <col>编制处室：|right</col>
+    <col>编写：|right</col>
+    <col>审定：|right</col>
+    <col>日期：|right</col>
+    <col>主题：|right</col>
+    <col>正文|shift</col>
+    <col>领导批示:|right</col>
+  </template>
+<!--请示报告流程 END-->
+
+<!--公司收文流程 START-->
+  <template name='公文处理单.docx'>
+    <col>收文编号|right</col>
+    <col>收文日期|right</col>
+    <col>原文编号|right</col>
+    <col>公司办拟办意见：|right</col>
+    <col>领导批示|right</col>
+    <col>承办情况|right</col>
+  </template>
+  <template name='公司收文表单.docx'>
+    <col>收文编号：|right</col>
+    <col>收文日期：|right</col>
+    <col>原文号：|right</col>
+    <col>卷号：|right</col>
+    <col>文件名称：|right</col>
+    <col>公司办主任：|right</col>
+    <col>意见：|right</col>
+    <col>公司领导：|right</col>
+    <col>意见： |right</col>
+    <col>承办部门：|right</col>
+    <col>承办意见：|right</col>
+    <col>传阅人员：|right</col>
+    <col>传阅意见：|right</col>
+    <col>附件:|down</col>
+  </template>
+<!--公司收文流程 END-->
+
+<!--程序文件流程 START-->
+  <template name='程序文件表单.docx'>
+    <col>申请类型:|right</col>
+    <col>程序名称:|right</col>
+    <col>编码:|right</col>
+    <col>版次:|right</col>
+    <col>部门:|inner</col>
+    <col>人员:|inner</col>
+    <col>部门: |inner</col>
+    <col>人员: |inner</col>
+    <col>意见:|right</col>
+    <col>附件:|down</col>
+ </template>
+  <template name='程序审查意见落实表.docx'>
+    <col>年份|shift</col>
+    <col>第|right</col>
+    <col>程序名称:|inner</col>
+    <col>程序编码和版本:|inner</col>
+
+    <col>审核|right</col>
+    <col>日期 |right</col>
+    <col>校核|right</col>
+    <col>日期  |right</col>
+    <col>编制|right</col>
+    <col>日期   |right</col>
+  </template>
+  <template name='管理程序封面模板.docx'>
+    <col>管理程序|shift</col>
+    <col>HN编码:|right</col>
+    <col>版次:|right</col>
+    <col>程序名称|shift</col>
+    <col>批准实施:|right</col>
+    <col>生效日期:|right</col>
+    <col>编制姓名|shift</col>
+    <col>编制日期|shift</col>
+    <col>校核姓名|shift</col>
+    <col>校核日期|shift</col>
+    <col>审核姓名|shift</col>
+    <col>审核日期|shift</col>
+    <col>质保姓名|shift</col>
+    <col>质保日期|shift</col>
+    <col>程序编制部门:|shift</col>
+  </template>
+  <template name='管理程序变更申请表.docx'>
+    <col>管理程序变更申请表|shift</col>
+    <col>HN-LL431|shift</col>
+    <col>年份|shift</col>
+    <col>序号|shift</col>
+    <col>文件名称|right</col>
+    <col>编码版本|right</col>
+    <col>申请部门|right</col>
+    <col>申请日期|right</col>
+    <col>申请类型|right</col>
+    <col>原因:|inner</col>
+    <col>可能受到影响的程序:|inner</col>
+    <col>申请人姓名|right</col>
+    <col>日期|right</col>
+    <col>编制部门负责人姓名|right</col>
+    <col>日期 |right</col>
+    <col>意见:|inner</col>
+    <col>审核人姓名|right</col>
+    <col>日期  |right</col>
+    <col>质保处负责人姓名|right</col>
+    <col>日期   |right</col>
+    <col>网页更新结果:|inner</col>
+    <col>信息文档处操作人姓名|right</col>
+    <col>日期    |right</col>
+  </template>
+<!--程序文件流程 END-->
+
+<!--函件发文流程 START-->
+  <template name='函件发文表单.docx'>
+    <col>主送单位：|right</col>
+    <col>我方发文号：|right</col>
+    <col>主送人：|right</col>
+    <col>对方发文号：|right</col>
+    <col>抄送单位：|right</col>
+    <col>内部抄送：|right</col>
+    <col>页数：Pages|right</col>
+
+
+    
+    <col>签发/日期：|right</col>
+    <col>主题 Subject： |inner</col>
+    <col>内容|shift</col>
+    <col>拟稿/日期：|right</col>
+    <col>核稿/日期：|right</col>
+    <col>会签/日期：|right</col>
+  </template>
+<!--函件发文流程 END-->
+
+<!--函件收文流程 START-->
+  <template name='函件收文表单.docx'>
+    <col>收文号:|right</col>
+    <col>收文日期:|right</col>
+    <col>紧急程度:|right</col>
+    <col>文件编号:|right</col>
+    <col>来文单位:|right</col>
+    <col>页数:|right</col>
+    <col>文件标题:|right</col>
+    <col>批示领导:|right</col>
+    <col>传阅领导:|right</col>
+    <col>主办部门:|right</col>
+    <col>协办部门:|right</col>
+    <col>传阅部门:|right</col>
+    <col>其它意见:|right</col>
+    <col>拟办人:|right</col>
+    <col>领导意见:|right</col>
+    <col>领导:|right</col>
+    <col>承办部门:|right</col>
+    <col>承办意见:|right</col>
+    <col>部门领导:|right</col>
+    <col>科室领导:|right</col>
+    <col>普通人员:|right</col>
+    <col>备注|right</col>
+  </template>
+<!--函件收文流程 END-->
+<!--党纪工团发文流程 START-->
+  <template name="党纪工团发文表单.docx">
+    <col>紧急程度:|right</col>
+    <col>发文号:|right</col>
+    <col>签发:|right</col>
+    <col>会签人:|right</col>
+    <col>会签人: |right</col>
+    <col>日期:|right</col>
+    <col>秘书:|right</col>
+    <col>日期: |right</col>
+    <col>审稿人:|right</col>
+    <col>审稿日期:|right</col>
+    <col>主办部门:|right</col>
+    <col>拟稿日期:|right</col>
+    <col>拟稿人:|right</col>
+    <col>电话:|inner</col>
+    <col>标题:|right</col>
+    <col>主题词:|inner</col>
+    <col>主送:|right</col>
+    <col>抄送:|inner</col>
+    <col>发文日期:|right</col>
+    <col>共印|right</col>
+    <col>份,每份|right</col>
+    <col>打字:|inner</col>
+    <col>校对:|inner</col>
+    <col>复核:|right</col>
+    <col>已会签人:|right</col>
+    <col>意见:|right</col>
+    <col>已会签人: |right</col>
+    <col>意见: |right</col>
+    <col>分发范围:|right</col>
+    <col>附件:|down</col>
+  </template>
+  
+  <template name="党委部门文件模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>抄送：（仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="党委请示模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>抄送：（仿宋三号，不加粗）|shift</col>
+    <col>2009年 月 日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="海南党委文件模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>抄送：（仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="海南工会请示模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>抄送： （仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="海南共青团文件模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>抄送： （仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="海南纪委文件模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>抄送：（仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="海南工会文件模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>抄送： （仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="海南共青团请示文件模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>  抄送：（仿宋三号，不加粗）|shift</col>
+    <col>2010年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="海南纪委请示文件模版.docx">
+    <col>[标题]|shift</col>
+    <col>[主送单位]|shift</col>
+    <col>[正文仿宋三号,不加粗]|shift</col>
+    <col>[二〇〇九年某月某日]|shift</col>
+    <col>主题词：（三号黑体，中间空2字符）|shift</col>
+    <col>抄送：（仿宋三号，不加粗）|shift</col>
+    <col>2009年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <!--党纪团工发文 纪要模板-->
+  <template name="党群工作全例会会议纪要模版.docx">
+    <col>主题词：|shift</col>
+    <col>分送：|shift</col>
+    <col>2010年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="党群简报模版.docx">
+    <col>分送：|shift</col>
+    <col>2010年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="党委会议纪要模版.docx">
+    <col>主题词：|shift</col>
+    <col>分送：|shift</col>
+    <col>2010年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+
+  <template name="党政联席会纪要模版.docx">
+    <col>主题词：|shift</col>
+    <col>分送：|shift</col>
+    <col>2010年  月  日印发|shift</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+  </template>
+  <!--党纪团工发文 纪要模板-->
+  
+  <!--党纪工团发文 首页纸模板-->
+  <template name="党委公文首页纸模板.docx">
+    <col>密别：|inner</col>
+    <col>海|shift</col>
+    <col>编号|shift</col>
+    <col>号|shift</col>
+    <col>紧急程度：|right</col>
+    <col>签发|shift</col>
+    <col>会签|shift</col>
+    <col>核稿：|down</col>
+    <col>审稿|right</col>
+    <col>拟及稿电人话|right</col>
+    <col>主送：|right</col>
+    <col>抄送：|right</col>
+    <col>主题词：|right</col>
+    <col>标题：|right</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+    <col>共印|right</col>
+  </template>
+  <template name="工会首页纸.docx">
+    <col>密别：|inner</col>
+    <col>海|shift</col>
+    <col>编号|shift</col>
+    <col>号|shift</col>
+    <col>紧急程度：|right</col>
+    <col>签发|shift</col>
+    <col>会签|shift</col>
+    <col>核稿：|down</col>
+    <col>审稿|right</col>
+    <col>拟及稿电人话|right</col>
+    <col>主送：|right</col>
+    <col>抄送：|right</col>
+    <col>主题词：|right</col>
+    <col>标题：|right</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+    <col>共印|right</col>
+  </template>
+  <template name="共青团首页纸.docx">
+    <col>密别：|inner</col>
+    <col>海|shift</col>
+    <col>编号|shift</col>
+    <col>号|shift</col>
+    <col>紧急程度：|right</col>
+    <col>签发|shift</col>
+    <col>会签|shift</col>
+    <col>核稿：|down</col>
+    <col>审稿|right</col>
+    <col>拟及稿电人话|right</col>
+    <col>主送：|right</col>
+    <col>抄送：|right</col>
+    <col>主题词：|right</col>
+    <col>标题：|right</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+    <col>共印|right</col>
+  </template>
+  <template name="纪律检查委员会首页纸.docx">
+    <col>密别：|inner</col>
+    <col>海|shift</col>
+    <col>编号|shift</col>
+    <col>号|shift</col>
+    <col>紧急程度：|right</col>
+    <col>签发|shift</col>
+    <col>会签|shift</col>
+    <col>核稿：|down</col>
+    <col>审稿|right</col>
+    <col>拟及稿电人话|right</col>
+    <col>主送：|right</col>
+    <col>抄送：|right</col>
+    <col>主题词：|right</col>
+    <col>标题：|right</col>
+    <col>打字：|right</col>
+    <col>校对：|right</col>
+    <col>共印|right</col>
+  </template>
+  <!--党纪工团发文 首页纸模板-->
+<!--党纪工团发文流程 END-->
+
+<!--党纪工团收文流程 START-->
+  <template name='党纪工团收文表单.docx'>
+    <col>收文编号：|right</col>
+    <col>收文日期：|right</col>
+    <col>原文号：|right</col>
+    <col>卷号：|right</col>
+    <col>文件名称：|right</col>
+    <col>党群工作处处长：|right</col>
+    <col>意见：|right</col>
+    <col>公司领导：|right</col>
+    <col>意见： |right</col>
+    <col>承办部门：|right</col>
+    <col>承办意见：|right</col>
+    <col>传阅人员：|right</col>
+    <col>传阅意见：|right</col>
+    <col>附件:|down</col>
+  </template>
+<!--党纪工团收文流程 END-->
+</config>

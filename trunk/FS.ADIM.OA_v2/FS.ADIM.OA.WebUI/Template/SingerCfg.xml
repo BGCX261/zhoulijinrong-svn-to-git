@@ -1,0 +1,196 @@
+﻿<Signer Ratio="7:1.5"> 
+  <!--Ratio表示签名图片长宽比例,若为空,或无效数值则使用<Singer>节点中配置的长宽值 注:Ratio区分大小写,所有节点名称以及节点属性区分大小写-->
+  <!--<Singer>节点新增Display属性，表示是否对所配置节点处生成的签名图片增加时间戳，若Display="none"值，则表示只输出签名图片，不添加时间戳；
+  否则Display属性赋值为其他值或未添加该属性时，则表示若取不到相应日期时间的情况下，将取当前日期时间作为时间戳-->
+  <Process Name="程序文件">
+    <Template Name="程序审查意见落实表">
+      <Singer Left="-10" Top="0" Width="100" Height="30" Step="领导会签:较早">公司领导|down</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="20" Step="审核:较晚">审核|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="20" Step="校核:较晚">校核|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="20" Step="编制:较晚">编制|right</Singer>
+    </Template>
+    <Template Name="管理程序封面模板">
+      <Singer Left="-10" Top="0" Width="180" Height="70" Step="批准:较早" Display="none">批准实施:|right</Singer>
+      <Singer Left="-5" Top="-7" Width="140" Height="47" Step="编制:较晚" Display="none">编制|right</Singer>
+      <Singer Left="-5" Top="-7" Width="140" Height="47" Step="校核:较晚" Display="none">校核|right</Singer>
+      <Singer Left="-5" Top="-7" Width="140" Height="47" Step="审核:较晚" Display="none">审核|right</Singer>
+      <Singer Left="-5" Top="-7" Width="140" Height="47" Step="质保审查:较早" Display="none">质保审查|right</Singer>
+    </Template>
+  </Process>
+  
+  <Process Name="党纪工团发文">
+    <Template Name="党群工作全例会会议纪要模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="党群简报模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="党委部门文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    
+    <Template Name="党委会议纪要模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="党委请示模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="党政联席会纪要模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="党委公文首页纸模板">
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="签发:较晚">签发：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="部门会签:较晚">会签：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="核稿:较晚">核稿：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="审稿:较晚" >审稿|right</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="拟稿:较早">拟及稿电人话|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="工会首页纸">
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="签发:较晚">签发：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="部门会签:较晚">会签：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="核稿:较晚">核稿：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="审稿:较晚" >审稿|right</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="拟稿:较早">拟及稿电人话|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="共青团首页纸">
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="签发:较晚">签发：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="部门会签:较晚">会签：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="核稿:较晚">核稿：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="审稿:较晚" >审稿|right</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="拟稿:较早">拟及稿电人话|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="纪律检查委员会首页纸">
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="签发:较晚">签发：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="部门会签:较晚">会签：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="核稿:较晚">核稿：|down</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="审稿:较晚" >审稿|right</Singer>
+      <Singer Left="0" Top="15" Width="120" Height="30" Step="拟稿:较早">拟及稿电人话|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="海南党委文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="海南工会请示模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="海南共青团文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="海南纪委文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    
+    <Template Name="海南工会文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="海南共青团请示文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="海南纪委请示文件模版">
+      <Singer Left="-20" Top="0" Width="120" Height="30" Display="none">打字：|right</Singer>
+      <Singer Left="-20" Top="0" Width="120" Height="30" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+  </Process>
+
+  <Process Name="党纪工团收文">
+    <Template Name="党纪工团收文表单">
+      <Singer Left="0" Top="0" Width="90" Height="30" Step="拟办:较早">党群工作处处长：|right</Singer>
+    </Template>
+  </Process>
+
+  <Process Name="工作联系单">
+    <Template Name="工作联系单">
+      <Singer Left="-10" Top="0" Width="80" Height="20" Step="拟稿:较晚">编写:|right</Singer>
+      <Singer Left="-10" Top="0" Width="80" Height="20" Step="核稿:较晚">校核:|right</Singer>
+      <Singer Left="-15" Top="0" Width="80" Height="20" Step="签发:较晚">审定:|right</Singer>
+    </Template>
+  </Process>
+  
+  <Process Name="公司发文">
+    <Template Name="工程会议纪要">
+      <Singer Left="0" Top="0" Width="100" Height="40" Display="none">  打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="公文报告模版">
+      <Singer Left="0" Top="0" Width="100" Height="40" Display="none">打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="公文函模版">
+      <Singer Left="0" Top="0" Width="100" Height="40" Display="none">打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="公文请示模版">
+      <Singer Left="0" Top="0" Width="100" Height="40" Display="none">打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="公文通知模版">
+      <Singer Left="0" Top="0" Width="100" Height="40" Display="none">打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="会议纪要模版">
+      <Singer Left="0" Top="0" Width="100" Height="40" Display="none">打字：|right</Singer>
+      <Singer Left="0" Top="0" Width="100" Height="40" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+    <Template Name="公文首页纸">
+		  <Singer Left="0" Top="15" Width="120" Height="30" Step="签发:较晚">签发：|down</Singer>
+      		  <Singer Left="5" Top="1" Width="120" Height="30" Step="部门会签:较晚">会签：|down</Singer>
+		  <Singer Left="20" Top="1" Width="120" Height="35" Step="核稿:较晚">核稿：|down</Singer>
+		  <Singer Left="10" Top="1" Width="120" Height="35" Step="审稿:较晚">审稿|right</Singer>
+		  <Singer Left="5" Top="1" Width="120" Height="35" Step="拟稿:较早">拟稿人及电话|right</Singer>
+		  <Singer Left="0" Top="0" Width="120" Height="40" Display="none">打字：|right</Singer>
+		  <Singer Left="0" Top="0" Width="120" Height="40" Step="校对:较晚">校对：|right</Singer>
+    </Template>
+  </Process>
+
+  <Process Name="函件发文">
+    <Template Name="函件发文表单">
+      <Singer Left="0" Top="0" Width="135" Height="56" Step="签发:较晚">签发/日期：|right</Singer>
+      <Singer Left="0" Top="0" Width="135" Height="56" Step="发起函件:较早">拟稿/日期：|right</Singer>
+      <Singer Left="0" Top="0" Width="135" Height="56" Step="核稿:较晚">核稿/日期：|right</Singer>
+      <Singer Left="0" Top="0" Width="135" Height="56" Step="会签:较晚">会签/日期：|right</Singer>
+    </Template>
+  </Process>
+
+  <Process Name="函件收文">
+    <Template Name="函件收文表单">
+      <Singer Left="0" Top="0" Width="100" Height="30" Step="领导批示:较晚">批示领导:|right</Singer>
+      <Singer Left="0" Top="0" Width="139" Height="57" Step="拟办:较早">拟办人:|right</Singer>
+      <Singer Left="0" Top="0" Width="80" Height="40" Step="领导批示:较晚">领导:|right</Singer>
+      <Singer Left="-5" Top="0" Width="80" Height="40" Step="处室承办:较晚">部门领导:|down</Singer>
+      <Singer Left="-15" Top="0" Width="80" Height="40" Step="科室承办:较晚">科室领导:|down</Singer>
+      <Singer Left="-15" Top="0" Width="80" Height="40" Step="人员承办:较晚">普通人员:|down</Singer>
+    </Template>
+  </Process>
+
+  <Process Name="请示报告">
+    <Template Name="公司报告">
+      <Singer Left="-20" Top="0" Width="100" Height="40" Step="拟稿:较晚">编写：|right</Singer>
+      <Singer Left="-20" Top="0" Width="100" Height="40" Step="签发:较晚">审定：|right</Singer>
+      <Singer Left="-20" Top="0" Width="100" Height="40" Step="领导批示:较晚">领导批示:|right</Singer>
+    </Template>
+    <Template Name="公司请示">
+      <Singer Left="-20" Top="0" Width="100" Height="40" Step="拟稿:较晚">编写：|right</Singer>
+      <Singer Left="-20" Top="0" Width="100" Height="40" Step="签发:较晚">审定：|right</Singer>
+      <Singer Left="-20" Top="0" Width="100" Height="40" Step="领导批示:较晚">领导批示:|right</Singer>
+    </Template>
+  </Process>
+</Signer>

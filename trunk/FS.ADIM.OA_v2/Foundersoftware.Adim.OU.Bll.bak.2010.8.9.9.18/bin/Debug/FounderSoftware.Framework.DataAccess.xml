@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FounderSoftware.Framework.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:FounderSoftware.Framework.DataAccess.DPType">
+            <summary>
+            Data Persisitence
+            数据持久层的类型，常见的为支持SQL数据库产品
+            将来可扩展为文件数据库、内存数据库等非SQL类型DP
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.DataAccess.DPType.Excel">
+            <summary>
+            Ver 97-2003、2007
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.DataAccess.DPType.Access">
+            <summary>
+            Ver 97-2003、2007
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.DataAccess.DPType.SQL">
+            <summary>
+            Ver 7.0、2000、2005
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.DataAccess.IDPAccess">
+            <summary>
+            数据持久访问的标准接口
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.Init(System.String,System.String)">
+            <summary>
+            初始化操作
+            </summary>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.Init(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            初始化操作
+            </summary>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <param name="iConnectTimeOut">连接时间</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.Open">
+            <summary>
+            打开访问,对于多次的访问操作特别重要
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.Close">
+            <summary>
+            关闭访问,对于多次的访问操作特别重要
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.TestConn">
+            <summary>
+            测试当前是否可对数据库进行访问
+            </summary>
+            <returns>测试结果：true－可访问，false－不可访问</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.RunNoQuery(System.String,System.Data.Common.DbTransaction)">
+            <summary>
+            执行strCmd,返回受影响的行数
+            </summary>
+            <param name="strCmd">命令</param>
+            <param name="DbTrans">事务</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.RunNoQuery(FounderSoftware.Framework.DataAccess.ISQLClause,System.Data.Common.DbTransaction)">
+            <summary>
+            执行strCmd,返回受影响的行数
+            </summary>
+            <param name="cla">命令</param>
+            <param name="DbTrans">事务</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.RunQuery(System.String,System.Data.Common.DbTransaction)">
+            <summary>
+            执行strCmd,返回查询的结果
+            </summary>
+            <param name="strCmd">查询的条件</param>
+            <param name="DbTrans">事务</param>
+            <returns>满足查询条件结果的数据表</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.GetFiledMax(System.String,System.String,System.Data.Common.DbTransaction)">
+            <summary>
+            获取指定表中指定字段的最大值
+            </summary>
+            <param name="strTable">表名</param>
+            <param name="strField">字段名</param>
+            <param name="DbTrans">事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.GetColumns">
+            <summary>
+            获取当前数据库中所有的列名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.IDPAccess.GetColumns(System.String)">
+            <summary>
+            获取当前数据库中指定表的所有列名
+            </summary>
+            <param name="strTable">表名</param>
+            <returns></returns>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.IDPAccess.DPType">
+            <summary>
+            获取当前数据库的类型
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.IDPAccess.Tables">
+            <summary>
+            获取当前数据库中所有的表名
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.IDPAccess.DbTrans">
+            <summary>
+            获取数据库操作的事务
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.DataAccess.DPAccessFactory">
+            <summary>
+            IDPAccess的工厂类,提供创建IDPAccess实例的统一接口
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.Create(FounderSoftware.Framework.DataAccess.DPType)">
+            <summary>
+            根据传入的type值,创建IDPAccess实例
+            </summary>
+            <param name="type">数据库类型</param>
+            <returns>IDPAccess实例</returns>
+        </member>
+        <member name="T:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess">
+            <summary>
+            数据库访问的接口，现支持Excel、Access、SQL Server，未来根据需要可扩展支持Oracle、DB2、MySQL等。
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.#ctor(FounderSoftware.Framework.DataAccess.DPType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="type">持久化类型</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.Init(System.String,System.String)">
+            <summary>
+            初始化操作
+            </summary>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.Init(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            初始化操作
+            </summary>
+            <param name="strDataSource">服务器名,Excel, Access为文件名</param>
+            <param name="strDataBase">数据库名,Execl, Access为空</param>
+            <param name="strUser">用户名</param>
+            <param name="strPwd">密码</param>
+            <param name="iConnectionTimeOut">连接时间</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.Open">
+            <summary>
+            打开访问,对于多次的访问操作特别重要
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.RunNoQuery(System.String,System.Data.Common.DbTransaction)">
+            <summary>
+            执行strCmd,返回受影响的行数
+            </summary>
+            <param name="strCmd">命令</param>
+            <param name="DbTrans">事务</param>
+            <returns>受影响的行数</returns>
+            <exception cref="T:System.Exception">命令错误</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.RunNoQuery(FounderSoftware.Framework.DataAccess.ISQLClause,System.Data.Common.DbTransaction)">
+            <summary>
+            执行cla的命令,返回受影响的行数
+            </summary>
+            <param name="cla">命令</param>
+            <param name="DbTrans">事务</param>
+            <returns>受影响的行数</returns>
+            <exception cref="T:System.Exception">命令错误</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.RunNoQuery(System.String,System.Data.Common.DbTransaction,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            执行strCmd,返回受影响的行数
+            </summary>
+            <param name="strCmd">命令</param>
+            <param name="DbTrans">事务</param>
+            <param name="DbParas">参数列表</param>
+            <returns>受影响的行数</returns>
+            <exception cref="T:System.Exception">命令错误</exception>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.RunQuery(System.String,System.Data.Common.DbTransaction)">
+            <summary>
+            根据strCmd执行查询,返回查询的结果
+            </summary>
+            <param name="strCmd">查询的条件</param>
+            <param name="DbTrans">事务</param>
+            <returns>满足查询条件结果的数据表</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.Close">
+            <summary>
+            关闭访问,对于多次的访问操作特别重要
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.TestConn">
+            <summary>
+            测试当前是否可对数据库进行访问
+            </summary>
+            <returns>测试结果,为true时表示可访问,为false时表示不可访问</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.GetFiledMax(System.String,System.String,System.Data.Common.DbTransaction)">
+            <summary>
+            获取指定表中指定字段的最大值
+            </summary>
+            <param name="strTable">表名</param>
+            <param name="strField">字段名</param>
+            <param name="DbTrans">事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.GetColumns">
+            <summary>
+            获取当前数据库中所有的列名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.GetColumns(System.String)">
+            <summary>
+            获取当前数据库中指定表的所有列名
+            </summary>
+            <param name="strTable">表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.GetCmd(System.String)">
+            <summary>
+            获取DbCommand
+            </summary>
+            <param name="strCmd">string型命令</param>
+            <returns>DbCommand</returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.GetPara(System.String,System.Object)">
+            <summary>
+            获取DbParameter
+            </summary>
+            <param name="strName"></param>
+            <param name="oVal"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.DPType">
+            <summary>
+            获取持久化类型
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.DbTrans">
+            <summary>
+            获取事务
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.Tables">
+            <summary>
+            获取当前数据库中所有的表名
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPAccess.DbAdp">
+            <summary>
+            获取DbDataAdapter
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPOleDB">
+            <summary>
+            OLEDB
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPOleDB.#ctor(FounderSoftware.Framework.DataAccess.DPType)">
+            <summary>
+            构造
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPOleDB.Init(System.String,System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="strDataSource"></param>
+            <param name="strDataBase"></param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPOleDB.Init(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            初始化
+            </summary>
+            <param name="strDataSource"></param>
+            <param name="strDataBase"></param>
+            <param name="strUser"></param>
+            <param name="strPwd"></param>
+            <param name="iConnectionTimeOut"></param>
+            <exception cref="T:System.Exception">OLEDB未知类型</exception>
+        </member>
+        <member name="T:FounderSoftware.Framework.DataAccess.DPAccessFactory.DPSQL">
+            <summary>
+            SQLServer
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.DataAccess.ISQLClause">
+            <summary>
+            SQL语句生成的标准接口
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.ISQLClause.Add(System.String,System.Object)">
+            <summary>
+            增加字段
+            在Select情况下,name as val
+            在Update情况下,name = val
+            在Insert情况下,name values(val)
+            </summary>
+            <param name="strName">名称</param>
+            <param name="oVal">值</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.ISQLClause.AddWhere(System.String,System.Object)">
+            <summary>
+            增加Where条件, name = val
+            </summary>
+            <param name="strName">名称</param>
+            <param name="oVal">值</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.ISQLClause.Clear">
+            <summary>
+            清除所有的查询字段及条件
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.ISQLClause.Paras">
+            <summary>
+            获取参数列表
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.DataAccess.SQLClauseFactory">
+            <summary>
+            ISQLClause的工厂类,提供创建ISQLClause实例的统一接口
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.SQLClauseFactory.Create(System.String,FounderSoftware.Framework.DataAccess.SQLClauseFactory.Category)">
+            <summary>
+            根据传入的Category值,创建ISQLClause实例,同时设置ISQLClause的表名
+            </summary>
+            <param name="strTableName">表名</param>
+            <param name="category">语句类型</param>
+            <returns>ISQLClause实例</returns>
+        </member>
+        <member name="T:FounderSoftware.Framework.DataAccess.SQLClauseFactory.Category">
+            <summary>
+            SQLClause的类型
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.DataAccess.SQLClauseFactory.Category.Insert">
+            <summary>
+            Insert
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.DataAccess.SQLClauseFactory.Category.Update">
+            <summary>
+            Update
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.DataAccess.SQLClauseFactory.Category.Select">
+            <summary>
+            Select
+            </summary>
+        </member>
+        <member name="F:FounderSoftware.Framework.DataAccess.SQLClauseFactory.Category.Delete">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="T:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase">
+            <summary>
+            SQLClause的基类
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase.#ctor(System.String)">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase.Add(System.String,System.Object)">
+            <summary>
+            增加
+            </summary>
+            <param name="strName">名称</param>
+            <param name="oVal">值</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase.AddWhere(System.String,System.Object)">
+            <summary>
+            增加Where条件
+            </summary>
+            <param name="strName">名称</param>
+            <param name="oVal">值</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase.Clear">
+            <summary>
+            清除属性及Where
+            </summary>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase.AddPara(System.String,System.Object)">
+            <summary>
+            增加参数
+            </summary>
+            <param name="strName">名称</param>
+            <param name="oVal">值</param>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase.ToString">
+            <summary>
+            获取字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase.auxClear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase.Paras">
+            <summary>
+            获取参数列表
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase.TableName">
+            <summary>
+            获取表名
+            </summary>
+        </member>
+        <member name="P:FounderSoftware.Framework.DataAccess.SQLClauseFactory.SQLClauseBase.ToStr">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

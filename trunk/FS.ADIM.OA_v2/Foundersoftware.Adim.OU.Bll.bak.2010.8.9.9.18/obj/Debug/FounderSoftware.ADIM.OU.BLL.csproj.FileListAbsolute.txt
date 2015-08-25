@@ -1,0 +1,12 @@
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\bin\Debug\FounderSoftware.ADIM.OU.BLL.UpdateLog.txt
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\bin\Debug\FounderSoftware.ADIM.OU.BLL.dll.config
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\bin\Debug\FounderSoftware.ADIM.OU.BLL.XML
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\bin\Debug\FounderSoftware.ADIM.OU.BLL.dll
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\bin\Debug\FounderSoftware.ADIM.OU.BLL.pdb
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\bin\Debug\FounderSoftware.Framework.Business.dll
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\bin\Debug\FounderSoftware.Framework.DataAccess.dll
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\bin\Debug\FounderSoftware.Framework.Business.xml
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\bin\Debug\FounderSoftware.Framework.DataAccess.xml
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\obj\Debug\ResolveAssemblyReference.cache
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\obj\Debug\FounderSoftware.ADIM.OU.BLL.dll
+F:\核电代码\FounderSoftware.ADIM.OU.New1\FounderSoftware.ADIM.OU.BLL\obj\Debug\FounderSoftware.ADIM.OU.BLL.pdb
